@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 15px;
+    overflow: hidden;
+}
+
+:root {
+    --main-title: "lato";
+    --sub-title: "poppins";
+    --main-color: #0C3EB2;
+    --box-color: #D9D9D9;
+}
+
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.blck-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+}
+
+nav {
+    position: absolute;
+    padding: 20px 0px;
+    margin-top: 20px;
+    border-radius: 30px;
+    z-index: 999;
+}
+
+.navbar-expand-lg {
+    padding: 20px 10px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0, 0, 0);
+    margin: 0px auto;
+    padding: 0px 20px;
+}
+
+.navbar-toggler {
+    background-color: var(--main-color);
+}
+
+.navbar-toggler-icon {
+    color: white;
+}
+
+/* nav  over */
+
+
+/* header section start */
+header {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+}
+
+
+.header-section {
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/hero-image1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 62%;
+}
+
+.form-box {
+    position: absolute;
+    width: 600px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 99;
+}
+
+.destination-name {
+    font-family: var(--main-title);
+    font-weight: 800;
+    font-size: 111px;
+    color: white;
+    text-align: center;
+}
+
+.destintaion-desc {
+    text-align: justify;
+    color: whitesmoke;
+}
+
+.descctination-search {
+    width: 600px;
+    padding: 0px 20px;
+    position: relative;
+}
+
+.descctination-search input {
+    width: 100%;
+    padding: 16px 0px;
+    text-indent: 20px;
+    border-radius: 40px;
+}
+
+
+.descctination-search button {
+    position: absolute;
+    width: 20%;
+    padding: 10px 30px;
+    right: 35px;
+    border-radius: 20px;
+    top: 0;
+    margin: 0 auto;
+    transform: translateY(13%);
+    background-color: var(--main-color);
+    color: white;
+    text-align: center;
+}
+
+@media screen and (max-width:768px) {
+
+    .form-box {
+        width: 90vw;
+    }
+
+    .destination-name {
+        font-size: 18vw;
+    }
+
+    .descctination-search {
+        width: 90vw;
+    }
+
+    .descctination-search button {
+        padding: 10px 0px;
+    }
+}
+
+/* @media screen and (min-width:769) {
+    .form-box {
+        width: 600px;
+    }
+
+    .descctination-search {
+        width: 600px;
+    }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
