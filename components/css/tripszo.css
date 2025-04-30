@@ -66,32 +66,74 @@ nav {
     color: white;
 }
 
+@media screen and (max-width:768px) {
+    .navbar-light .navbar-nav .nav-link {
+        padding: 0px;
+        color: var(--main-color);
+        margin-top: 10px;
+        padding: 10px 0px;
+        text-align: center;
+        border-bottom: 1px solid black;
+        border-radius: 30px;
+    }
+}
+
 /* nav  over */
 
 
-/* header section start */
+/* Header Section Start */
 header {
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    /* Changed */
     position: absolute;
     top: 0;
     z-index: 0;
 }
 
-
-.header-section {
+.swiper {
     width: 100%;
-    height: 100%;
+    height: 100vh;
+}
+
+.swiper-slide {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.slide-1 {
     background-image: url("../images/hero-image1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 62%;
 }
 
+.slide-2 {
+    background-image: url("../images/hero-image2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 70%;
+}
+
+.slide-3 {
+    background-image: url("../images/hero-image3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+/* Your existing header-section and form-box css will work same */
+.header-section {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
 .form-box {
     position: absolute;
     width: 600px;
-    margin: 0 auto;
+    margin: auto;
     left: 0;
     right: 0;
     top: 0;
@@ -108,32 +150,33 @@ header {
 }
 
 .destintaion-desc {
-    text-align: justify;
+    text-align: center;
     color: whitesmoke;
+    margin-top: 15px;
 }
 
-.descctination-search {
+.destination-search {
     width: 600px;
     padding: 0px 20px;
     position: relative;
+    margin-top: 20px;
 }
 
-.descctination-search input {
+.destination-search input {
     width: 100%;
     padding: 16px 0px;
     text-indent: 20px;
     border-radius: 40px;
 }
 
-
-.descctination-search button {
+.destination-search button {
     position: absolute;
     width: 20%;
     padding: 10px 30px;
     right: 35px;
     border-radius: 20px;
     top: 0;
-    margin: 0 auto;
+    margin: auto;
     transform: translateY(13%);
     background-color: var(--main-color);
     color: white;
@@ -141,7 +184,6 @@ header {
 }
 
 @media screen and (max-width:768px) {
-
     .form-box {
         width: 90vw;
     }
@@ -150,64 +192,381 @@ header {
         font-size: 18vw;
     }
 
-    .descctination-search {
+    .destination-search {
         width: 90vw;
     }
 
-    .descctination-search button {
+    .destination-search input {
+        padding: 14px 0px;
+    }
+
+    .destination-search button {
+        width: 25%;
         padding: 10px 0px;
+        right: 35px;
+        transform: translateY(10%);
+
     }
 }
 
-/* @media screen and (min-width:769) {
-    .form-box {
-        width: 600px;
+.swiper-button-next::after {
+    content: "";
+    display: none;
+}
+
+.swiper-button-prev::after {
+    content: "";
+    display: none;
+}
+
+.mySwiper .swiper-pagination-bullet {
+    width: 30px !important;
+    height: 5px !important;
+    border-radius: 0 !important;
+    margin: 10px 10px 0px 10px !important;
+    /* space for small dot */
+    background: aliceblue !important;
+    position: relative;
+    opacity: 1 !important;
+    overflow: visible;
+    /* important to allow the dot to show outside */
+}
+
+/* Small dot below active bullet */
+.mySwiper .swiper-pagination-bullet-active::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -200%;
+    /* position below */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.mySwiper .swiper-pagination-bullet-active {
+    width: 50px !important;
+    background: var(--main-color) !important;
+}
+
+/* header over */
+
+
+
+/* services-section start */
+.services-section {
+    width: 100%;
+    margin: 100px auto;
+    padding: 0px 10px;
+}
+
+.service-card {
+    /* width: 16%; */
+    background-color: #D9D9D9;
+    text-align: center;
+    position: relative;
+    padding: 0px;
+    border-radius: 30px;
+    overflow: hidden;
+    margin: 10px auto;
+}
+
+.service-card .icon {
+    background-color: var(--main-color);
+    width: 100%;
+    height: 160px;
+    border-radius: 0 0 50% 50%;
+    position: relative;
+    z-index: 1;
+    line-height: 160px;
+    transition: background-color 0.3s ease;
+    overflow: hidden;
+}
+
+.service-card .icon::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    transition: height 0.4s ease;
+    z-index: 0;
+}
+
+.service-card:hover .icon::after {
+    height: 100%;
+    top: 0;
+}
+
+.service-card .service-name {
+    font-family: var(--main-title);
+    font-weight: 600;
+    font-size: 22px;
+    margin-top: 10px;
+    padding: 30px 10px;
+}
+
+
+/* banner section */
+.banner-section {
+    margin-bottom: 100px;
+    padding: 0px 10px;
+}
+
+.banner-box {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    border-radius: 30px;
+    text-align: center;
+    background-image: url("../images/hero-image.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 140px 0px;
+}
+
+.banner-box button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 150px;
+    height: 75px;
+    background-color: var(--main-color);
+    color: white;
+    border-style: solid;
+    border-color: white;
+    border-width: 12px 0 0 12px;
+    /* top right bottom left */
+    border-radius: 10px 0px 0px 0px;
+    outline: none;
+}
+
+/* banner box-over */
+
+
+/* destination-class */
+.desctination-wrapper {
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.centerd-title {
+    font-family: var(--main-title);
+    font-weight: 800;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--main-color);
+}
+
+.desctination-list {
+    display: flex;
+}
+
+.desctination-list .desctination-img {
+    position: relative;
+    margin: 10px auto;
+    overflow: hidden;
+}
+
+.desctination-list .desctination-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.desctination-img .dest-box {
+    width: 85%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: #D9D9D9;
+    bottom: -163px;
+    border-radius: 10px 10px 0px 0px;
+    transition: all 0.5s ease-in-out;
+    padding: 10px;
+}
+
+.dest-box hr {
+    margin: 5px auto;
+}
+
+.dest-box span h3 {
+    font-family: var(--main-title);
+    color: var(--main-color);
+    font-size: 18px;
+}
+
+.dest-box h2 {
+    font-family: var(--main-title);
+    color: var(--main-color);
+    font-size: 22px;
+    width: 250px;
+    padding: 10px;
+    border: 1px solid var(--main-color);
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+.dest-box h2:hover {
+    color: white;
+    background-color: var(--main-color);
+}
+
+.dest-box p {
+    font-family: var(--main-title);
+    color: var(--sub-title);
+    font-size: 14px;
+    padding-top: 20px;
+    text-align: justify;
+}
+
+.desctination-img:hover .dest-box {
+    bottom: 0;
+    background-color: white;
+}
+
+/* destination wrapper over */
+
+/* form wrapper */
+.form-section {
+    background-color: #F5ED0B;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-content {
+    padding: 50px;
+}
+
+.form-content .cloud-img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.form-content .cloud-img1 {
+    position: absolute;
+    bottom: -90px;
+    left: 300px;
+    z-index: 0;
+}
+
+.form-box1 {
+    background-color: var(--main-color);
+    padding: 10px;
+    border-radius: 20px;
+    z-index: 999;
+}
+
+.form-content h2 {
+    font-weight: 700;
+}
+
+.form-box1 form {
+    width: 100%;
+    padding: 30px;
+}
+
+.form-box1 form input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    text-indent: 10px;
+    margin: 10px auto;
+    border: none;
+}
+
+.form-box1 form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    text-indent: 10px;
+    margin: 10px auto;
+    border: none;
+}
+
+.form-box1 form input[type=submit] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    text-indent: 10px;
+    margin: 10px auto;
+    border: none;
+    border: var(--main-color);
+}
+
+/* plan structure class */
+
+.plan-structure-wrapper {
+    margin-bottom: 100px;
+}
+
+.plan-list {
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.plan-list .plan-box {
+    width: 24%;
+    background-color: #D9D9D9;
+    height: 400px;
+    padding: 20px 0px;
+    border-radius: 20px;
+    margin: 0 auto;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+@media screen and (max-width:426px) {
+    .plan-list .plan-box{
+        width: 100%;
+        margin: 10px auto;
     }
+}
 
-    .descctination-search {
-        width: 600px;
+@media screen and (min-width:427px) and (max-width:767px) {
+    .plan-list .plan-box{
+        width: 48%;
+        margin: 10px auto;
     }
-} */
+}
 
+.plan-list .plan-box:hover {
+    background-color: antiquewhite;
+    box-shadow: 0px 0px 10px black;
+}
 
+.plan-box p {
+    font-weight: 700;
+    padding: 0px 20px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.plan-box .plan-step {
+    background-color: var(--main-color);
+    text-align: center;
+    padding: 50px 0px;
+    border-radius: 50% 50% 0px 0px;
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+    margin-top: 200px;
+}
 
 
 

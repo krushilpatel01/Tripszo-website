@@ -27,8 +27,7 @@
 </head>
 
 <body>
-
-
+    <!-- hero banner with nav -->
     <div class="hero">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -37,7 +36,8 @@
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"><i class="fa-solid fa-bars fa-xl" style="color: #ffffff;"></i></span>
+                        <span class="navbar-toggler-icon"><i class="fa-solid fa-bars fa-xl"
+                                style="color: #ffffff;"></i></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                         <ul class="navbar-nav mb-2 mb-lg-0">
@@ -75,24 +75,83 @@
                 </div>
             </nav>
         </div>
-
-
+        <!-- header start -->
         <header>
-            <div class="blck-box"></div>
-
-            <div class="header-section">
-                <div class="container">
-                    <form class="form-box align-self-center">
-                        <h1 class="destination-name">KERALA</h1>
-                        <p class="destintaion-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. vel enim
-                            distinctio
-                            magnam aspernatur perferendis saepe illo, reprehenderit consequuntur doloribus.</p>
-                        <div class="descctination-search d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Search Desctination Here"
-                                aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
+            <!-- slider section -->
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide slide-1">
+                        <div class="header-section">
+                            <div class="blck-box"></div>
+                            <div class="container">
+                                <form class="form-box align-self-center">
+                                    <h1 class="destination-name">KERALA</h1>
+                                    <p class="destintaion-desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel enim
+                                        distinctio magnam aspernatur perferendis saepe illo, reprehenderit consequuntur
+                                        doloribus.
+                                    </p>
+                                    <div class="destination-search d-flex">
+                                        <input class="form-control me-2" type="search"
+                                            placeholder="Search Destination Here" aria-label="Search">
+                                        <button class="btn btn-outline-success" type="submit">Search</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                    </form>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide slide-2">
+                        <div class="header-section">
+                            <div class="blck-box"></div>
+                            <div class="container">
+                                <form class="form-box align-self-center">
+                                    <h1 class="destination-name">KASOL</h1>
+                                    <p class="destintaion-desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel enim
+                                        distinctio magnam aspernatur perferendis saepe illo, reprehenderit consequuntur
+                                        doloribus.
+                                    </p>
+                                    <div class="destination-search d-flex">
+                                        <input class="form-control me-2" type="search"
+                                            placeholder="Search Destination Here" aria-label="Search">
+                                        <button class="btn btn-outline-success" type="submit">Search</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide slide-3">
+                        <div class="header-section">
+                            <div class="blck-box"></div>
+                            <div class="container">
+                                <form class="form-box align-self-center">
+                                    <h1 class="destination-name">CHOPTA-TUNGNATH</h1>
+                                    <p class="destintaion-desc">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel enim
+                                        distinctio magnam aspernatur perferendis saepe illo, reprehenderit consequuntur
+                                        doloribus.
+                                    </p>
+                                    <div class="destination-search d-flex">
+                                        <input class="form-control me-2" type="search"
+                                            placeholder="Search Destination Here" aria-label="Search">
+                                        <button class="btn btn-outline-success" type="submit">Search</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pagination and Arrows -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"><i class="fa-solid fa-arrow-right fa-lg" style="color: #ffffff;"></i>
+                </div>
+                <div class="swiper-button-prev"><i class="fa-solid fa-arrow-left fa-lg" style="color: #ffffff;"></i>
                 </div>
             </div>
         </header>
