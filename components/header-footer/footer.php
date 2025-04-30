@@ -1,8 +1,43 @@
 <!-- footer.php -->
 <!-- Start of Footer -->
+<div class="footer-img"><img src="components/images/footer-icons.png"
+        style="width: 100%; height: 100%;
+    filter:brightness(0) saturate(100%) invert(20%) sepia(500%) saturate(532%) hue-rotate(194deg) brightness(100%) contrast(200%)" alt="" srcset=""></div>
 <footer>
-    <p>&copy; 2025 Tripszo Website. All rights reserved.</p>
-    <p style="margin-top:10px">Designed With PHP/BOOTSTRAP.</p>
+    <div class="container">
+        <div class="row justify-content-between align-items-center mb-4">
+            <div class="col-lg-3 foote-logo"><img src="components/images/hero-image1.jpg" alt="" srcset=""></div>
+            <div class="col-lg-9 d-flex">
+              <ul class="w-75" style="list-style:none; text-align: left; cursor:pointer;">
+                <li class="footer-heading">Menu</li>
+                <li class="my-2"><a href="index.php" style="color:white; text-decoration: none;">Home</a></li>
+                <li class="my-2"><a href="about.php" style="color:white; text-decoration: none;">About Us</a></li>
+                <li class="my-2"><a href="blog.php" style="color:white; text-decoration: none;">Blog</a></li>
+                <li class="my-2"><a href="contact.php" style="color:white; text-decoration: none;">Contact Us</a></li>
+              </ul>
+              <ul class="w-75" style="list-style:none; text-align: left; cursor:pointer;">
+                <li class="footer-heading">All Trips</li>
+                <li class="my-2">Weekend Trips</li>
+                <li class="my-2">International Trips</li>
+                <li class="my-2">Upcoming Trips</li>
+              </ul>
+              <ul class="w-75" style="list-style:none; text-align: left; cursor:pointer;">
+                <li class="footer-heading">Social Links</li>
+                <li class="my-2">Instagram</li>
+                <li class="my-2">Facebook</li>
+                <li class="my-2">Linkeden</li>
+                <li class="my-2">Google Maps</li>
+              </ul>
+              <ul class="w-75" style="list-style:none; text-align: left; cursor:pointer;">
+                <li class="footer-heading">Contact</li>
+                <li class="my-2">Number</li>
+                <li class="my-2">Email</li>
+                <li class="my-2">Address</li>
+              </ul>
+            </div>
+        </div>
+    </div>
+    <hr>
 </footer>
 <!-- End of Footer -->
 
@@ -20,25 +55,25 @@
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      spaceBetween: 30,
-      centeredSlides: true,
-      autoplay: {
+<!-- Initialize Swiper -->
+<script>
+var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
         delay: 2500,
         disableOnInteraction: false,
-      },
-      pagination: {
+    },
+    pagination: {
         el: ".swiper-pagination",
         clickable: true,
-      },
-      navigation: {
+    },
+    navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
-      },
-    });
-  </script>
+    },
+});
+</script>
 </body>
 
 </html>

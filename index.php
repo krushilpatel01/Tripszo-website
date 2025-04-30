@@ -186,16 +186,107 @@ include "components/header-footer/header.php";
 
 
 <!-- customer reviews -->
- <section class="customer-section">
+<section class="customer-section">
     <div class="container">
         <h2 class="centerd-title">Customer Reviews</h2>
-        <div class="row">
-            <div class="col-4"></div>
-            <div class="col-4"></div>
-            <div class="col-4"></div>
+        <div class="row client-review-list">
+            <div class="col-4">
+                <div class="client-review mb-2">
+                    <div class="client-info d-flex align-items-center mb-4">
+                        <div class="client-img"><img src="components/images" alt="" srcset=""></div>
+                        <div class="client-name">
+                            <h2>Customer Name</h2>
+                            <div class="icon"><span><i class="fa-solid fa-star me-1"
+                                        style="color: #FFD43B;"></i></span><span><i class="fa-solid fa-star me-1"
+                                        style="color: #FFD43B;"></i></span><span><i class="fa-solid fa-star me-1"
+                                        style="color: #FFD43B;"></i></span><span><i class="fa-solid fa-star me-1"
+                                        style="color: #FFD43B;"></i></span><span><i class="fa-solid fa-star me-1"
+                                        style="color: #FFD43B;"></i></span></div>
+                        </div>
+                    </div>
+                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos asperiores sunt optio
+                        deleniti
+                        facilis non perferendis, dolorum sed impedit obcaecati.</p>
+                </div>
+                <div class="client-review bg-primary">
+                    <div class="client-info d-flex align-items-center mb-4">
+                        <div class="client-img"><img src="components/images" alt="" srcset=""></div>
+                        <div class="client-name">
+                            <h2>Customer Name</h2>
+                            <div class="icon"><span><i class="fa-solid fa-star me-1"
+                                        style="color: #FFD43B;"></i></span><span><i class="fa-solid fa-star me-1"
+                                        style="color: #FFD43B;"></i></span><span><i class="fa-solid fa-star me-1"
+                                        style="color: #FFD43B;"></i></span><span><i class="fa-solid fa-star me-1"
+                                        style="color: #FFD43B;"></i></span><span><i class="fa-solid fa-star me-1"
+                                        style="color: #FFD43B;"></i></span></div>
+                        </div>
+                    </div>
+                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos asperiores sunt optio
+                        deleniti
+                        facilis non perferendis, dolorum sed impedit obcaecati.</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="client-review mb-2 bg-primary">
+                    <div class="client-info d-flex align-items-center mb-4">
+                        <div class="client-img"><img src="components/images" alt="" srcset=""></div>
+                        <div class="client-name">
+                            <h2>Customer Name</h2>
+                            <div class="icon"><span><i class="fa-solid fa-star me-1"
+                                        style="color: #FFD43B;"></i></span><span><i class="fa-solid fa-star me-1"
+                                        style="color: #FFD43B;"></i></span><span><i class="fa-solid fa-star me-1"
+                                        style="color: #FFD43B;"></i></span><span><i class="fa-solid fa-star me-1"
+                                        style="color: #FFD43B;"></i></span><span><i class="fa-solid fa-star me-1"
+                                        style="color: #FFD43B;"></i></span></div>
+                        </div>
+                    </div>
+                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos asperiores sunt optio
+                        deleniti
+                        facilis non perferendis, dolorum sed impedit obcaecati.</p>
+                </div>
+                <div class="client-review">
+                    <div class="client-info d-flex align-items-center mb-4">
+                        <div class="client-img"><img src="components/images" alt="" srcset=""></div>
+                        <div class="client-name">
+                            <h2>Customer Name</h2>
+                            <div class="icon"><span><i class="fa-solid fa-star me-1"
+                                        style="color: #FFD43B;"></i></span><span><i class="fa-solid fa-star me-1"
+                                        style="color: #FFD43B;"></i></span><span><i class="fa-solid fa-star me-1"
+                                        style="color: #FFD43B;"></i></span><span><i class="fa-solid fa-star me-1"
+                                        style="color: #FFD43B;"></i></span><span><i class="fa-solid fa-star me-1"
+                                        style="color: #FFD43B;"></i></span></div>
+                        </div>
+                    </div>
+                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos asperiores sunt optio
+                        deleniti
+                        facilis non perferendis, dolorum sed impedit obcaecati.</p>
+                </div>
+            </div>
+            <div class="col-4 video-box"></div>
         </div>
     </div>
- </section>
+</section>
+
+<!-- travel images -->
+<section class="travel-images-section">
+    <div class="container">
+        <h2 class="centerd-title">Why Travel With Us ?</h2>
+        <div class="row travel-images-list">
+            <div class="col-sm-12 col-md-4 travel-images-wrapper">
+                <div class="travel-img-box1"></div>
+                <div class="travel-img-box2"></div>
+            </div>
+            <div class="col-sm-12 col-md-4 travel-images-wrapper">
+                <div class="travel-img-box2"></div>
+                <div class="travel-img-box1"></div>
+            </div>
+            <div class="col-sm-12 col-md-4 travel-images-wrapper">
+                <div class="travel-img-box1"></div>
+                <div class="travel-img-box2"></div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- footer addd -->
 <?php
