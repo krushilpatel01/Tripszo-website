@@ -7,34 +7,43 @@
     <div class="container">
         <div class="row justify-content-between align-items-center mb-4">
             <div class="col-lg-3 foote-logo"><img src="components/images/hero-image1.jpg" alt="" srcset=""></div>
-            <div class="col-lg-9 d-flex">
-              <ul class="w-75" style="list-style:none; text-align: left; cursor:pointer;">
-                <li class="footer-heading">Menu</li>
-                <li class="my-2"><a href="index.php" style="color:white; text-decoration: none;">Home</a></li>
-                <li class="my-2"><a href="about.php" style="color:white; text-decoration: none;">About Us</a></li>
-                <li class="my-2"><a href="blog.php" style="color:white; text-decoration: none;">Blog</a></li>
-                <li class="my-2"><a href="contact.php" style="color:white; text-decoration: none;">Contact Us</a></li>
-              </ul>
-              <ul class="w-75" style="list-style:none; text-align: left; cursor:pointer;">
-                <li class="footer-heading">All Trips</li>
-                <li class="my-2">Weekend Trips</li>
-                <li class="my-2">International Trips</li>
-                <li class="my-2">Upcoming Trips</li>
-              </ul>
-              <ul class="w-75" style="list-style:none; text-align: left; cursor:pointer;">
-                <li class="footer-heading">Social Links</li>
-                <li class="my-2">Instagram</li>
-                <li class="my-2">Facebook</li>
-                <li class="my-2">Linkeden</li>
-                <li class="my-2">Google Maps</li>
-              </ul>
-              <ul class="w-75" style="list-style:none; text-align: left; cursor:pointer;">
-                <li class="footer-heading">Contact</li>
-                <li class="my-2">Number</li>
-                <li class="my-2">Email</li>
-                <li class="my-2">Address</li>
-              </ul>
+            <div class="col-lg-9 d-flex mt-5">
+                <ul class="w-100 w-sm-50 w-lg-25 footer-links px-2"
+                    style="list-style: none; text-align: left; cursor: pointer;">
+                    <li class="footer-heading">Menu</li>
+                    <li class="my-2"><a href="index.php" style="color:white; text-decoration: none;">Home</a></li>
+                    <li class="my-2"><a href="about.php" style="color:white; text-decoration: none;">About Us</a></li>
+                    <li class="my-2"><a href="blog.php" style="color:white; text-decoration: none;">Blog</a></li>
+                    <li class="my-2"><a href="contact.php" style="color:white; text-decoration: none;">Contact Us</a>
+                    </li>
+                </ul>
+
+                <ul class="w-100 w-sm-50 w-lg-25 footer-links px-2"
+                    style="list-style: none; text-align: left; cursor: pointer;">
+                    <li class="footer-heading">All Trips</li>
+                    <li class="my-2">Weekend Trips</li>
+                    <li class="my-2">International Trips</li>
+                    <li class="my-2">Upcoming Trips</li>
+                </ul>
+
+                <ul class="w-100 w-sm-50 w-lg-25 footer-links px-2"
+                    style="list-style: none; text-align: left; cursor: pointer;">
+                    <li class="footer-heading">Social Links</li>
+                    <li class="my-2">Instagram</li>
+                    <li class="my-2">Facebook</li>
+                    <li class="my-2">LinkedIn</li> <!-- corrected spelling -->
+                    <li class="my-2">Google Maps</li>
+                </ul>
+
+                <ul class="w-100 w-sm-50 w-lg-25 footer-links px-2"
+                    style="list-style: none; text-align: left; cursor: pointer;">
+                    <li class="footer-heading">Contact</li>
+                    <li class="my-2">Number</li>
+                    <li class="my-2">Email</li>
+                    <li class="my-2">Address</li>
+                </ul>
             </div>
+
         </div>
     </div>
     <hr>
