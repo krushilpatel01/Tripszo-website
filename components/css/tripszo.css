@@ -63,7 +63,7 @@ nav {
     padding: 20px 0px;
     margin-top: 20px;
     border-radius: 30px;
-    z-index: 999;
+    z-index: 99;
     border: 0.5px solid var(--main-color);
 }
 
@@ -94,6 +94,31 @@ nav {
         text-align: center;
         border-bottom: 1px solid black;
         border-radius: 30px;
+    }
+}
+
+/* Ensure dropdown displays correctly */
+.navbar .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 0.5rem 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Show dropdown on click (Bootstrap handles this) */
+.navbar .dropdown-menu.show {
+    display: block;
+}
+
+/* Optional: show on hover for desktop view */
+@media (min-width: 992px) {
+    .navbar .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
     }
 }
 
@@ -1208,6 +1233,154 @@ form textarea {
     color: white;
 }
 
-.google-map iframe{
+.google-map iframe {
     border-radius: 30px;
+}
+
+
+/* trips wrapper */
+.trip-section-wrapper {
+    margin: 50px auto;
+}
+
+.trips-wrapper {
+    margin: 30px auto;
+    justify-content: space-between;
+}
+
+.trip-card {
+    /* width: 49%; */
+    box-shadow: 0px 0px 10px rgb(228, 187, 137);
+    padding: 0px;
+    border-radius: 30px;
+    position: relative;
+    margin: 10px auto;
+}
+
+.trip-card-3 {
+    /* width: 49%; */
+    box-shadow: 0px 0px 10px rgb(228, 187, 137);
+    padding: 0px;
+    border-radius: 30px;
+    position: relative;
+    margin: 10px auto;
+}
+
+@media screen and (min-width:600px) and (max-width:768px) {
+    .trip-card {
+        width: 49%;
+    }
+
+    .trip-card-3 {
+        width: 48%;
+    }
+}
+
+@media screen and (min-width:769px) {
+    .trips-wrapper {
+        margin: 10px auto;
+        justify-content: space-between;
+    }
+
+    .trip-card {
+        width: 48%;
+    }
+
+    .trip-card-3 {
+        width: 31%;
+    }
+}
+
+.trip-toltip {
+    position: absolute;
+    background-color: #DBFFD9;
+    width: 150px;
+    padding: 5px 0px;
+    text-align: center;
+    right: 0;
+    top: 40px;
+    border-radius: 10px 0px 0px 10px;
+    color: #18B20F;
+}
+
+.trip-price-toltip {
+    position: absolute;
+    background-color: #F51010;
+    width: 150px;
+    padding: 5px 0px;
+    text-align: center;
+    right: 0;
+    top: 40px;
+    border-radius: 10px 0px 0px 10px;
+    color: #ffffff;
+}
+
+.trip-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+
+.trip-content {
+    margin-top: 10px;
+    padding: 10px 20px 30px 20px;
+}
+
+.trip-content h3 {
+    font-family: var(--main-title);
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.trip-content h5 {
+    font-family: var(--main-title);
+    font-size: 20px;
+    font-weight: 500;
+    color: #b0a7a7;
+    margin-bottom: 20px;
+}
+
+.trip-content .trip-btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.trip-btn #send-query {
+    width: 48%;
+    padding: 10px 0px;
+    border-radius: 30px;
+    border: none;
+    background-color: var(--main-color);
+    color: white;
+}
+
+.trip-btn #know-more {
+    width: 48%;
+    padding: 10px 0px;
+    border-radius: 30px;
+    border: 1px solid black;
+}
+
+.destination-btn {
+    width: 200px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.destination-btn #current {
+    background-color: var(--main-color);
+    padding: 5px 30px;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    margin-right: 10px;
+}
+
+.destination-btn #active {
+    padding: 5px 30px;
+    color: rgb(0, 0, 0);
+    border-radius: 30px;
+    border: 1px solid black;
+    margin-right: 10px;
+    background-color: white;
 }
