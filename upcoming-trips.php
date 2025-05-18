@@ -15,56 +15,8 @@
 
 <body>
     <!-- hero banner with nav -->
-    <div class="secoundry-hero">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container">
-                    <a class="navbar-brand" href="#">Navbar</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"><i class="fa-solid fa-bars fa-xl"
-                                style="color: #ffffff;"></i></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                        <ul class="navbar-nav mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="about.php">About Us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="blog.php">Blog</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.php">Contact</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    All Trips
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#">Indian Trips</a></li>
-                                    <li><a class="dropdown-item" href="#">Internationl Trips</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Upcoming Trips</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Login</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </div>
+    <?php include "components/header-footer/pages-header.php"; ?>
     <!-- header over -->
-
 
     <section class="trip-section-wrapper">
         <div class="container">

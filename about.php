@@ -46,12 +46,13 @@
                                     All Trips
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#">Indian Trips</a></li>
-                                    <li><a class="dropdown-item" href="#">Internationl Trips</a></li>
+                                    <li><a class="dropdown-item" href="weekend-trips.php">Weekend Trips</a></li>
+                                    <li><a class="dropdown-item" href="international-trip.php">International Trips</a>
+                                    </li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" href="#">Upcoming Trips</a></li>
+                                    <li><a class="dropdown-item" href="upcoming-trips.php">Upcoming Trips</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
