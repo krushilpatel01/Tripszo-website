@@ -29,10 +29,10 @@
                     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                         <ul class="navbar-nav mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+                                <a class="nav-link" aria-current="page" href="index.php">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="about.php">About Us</a>
+                                <a class="nav-link active" href="about.php">About Us</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="blog.php">Blog</a>
@@ -63,6 +63,8 @@
                 </div>
             </nav>
         </div>
+
+
         <!-- header start -->
         <div class="header-pages">
             <div class="video-wrapper">
@@ -93,7 +95,6 @@
             </div>
         </div>
     </section>
-
 
     <!-- servrices section -->
     <section class="services-section">
@@ -177,7 +178,6 @@
         </div>
     </section>
 
-
     <!-- founder section -->
     <section class="founder-section">
         <div class="container">
@@ -208,7 +208,6 @@
         </div>
     </section>
 
-
     <!-- our team member -->
     <section class="our-team-wrapper">
         <div class="container">
@@ -238,8 +237,6 @@
             </div>
         </div>
     </section>
-
-
 
     <!-- footer addd -->
     <?php

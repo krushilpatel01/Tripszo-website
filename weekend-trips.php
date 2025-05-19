@@ -29,9 +29,9 @@
                     <div class="trip-content">
                         <h3>Destination</h3>
                         <h5>price</h5>
-                        <div class="trip-btn">
-                            <input type="submit" value="Send Query" id="send-query">
-                            <input type="submit" value="Know More" id="know-more">
+                        <div class="trip-btn d-flex gap-2">
+                            <a href="send-query.php" class="btn btn-primary" id="send-query">Send Query</a>
+                            <a href="trip-show.php" class="btn" id="know-more">Know More</a>
                         </div>
                     </div>
                 </div>
@@ -41,9 +41,9 @@
                     <div class="trip-content">
                         <h3>Destination</h3>
                         <h5>price</h5>
-                        <div class="trip-btn">
-                            <input type="submit" value="Send Query" id="send-query">
-                            <input type="submit" value="Know More" id="know-more">
+                        <div class="trip-btn d-flex gap-2">
+                            <a href="send-query.php" class="btn btn-primary" id="send-query">Send Query</a>
+                            <a href="trip-show.php" class="btn" id="know-more">Know More</a>
                         </div>
                     </div>
                 </div>
@@ -55,9 +55,9 @@
                     <div class="trip-content">
                         <h3>Destination</h3>
                         <h5>price</h5>
-                        <div class="trip-btn">
-                            <input type="submit" value="Send Query" id="send-query">
-                            <input type="submit" value="Know More" id="know-more">
+                        <div class="trip-btn d-flex gap-2">
+                            <a href="send-query.php" class="btn btn-primary" id="send-query">Send Query</a>
+                            <a href="trip-show.php" class="btn" id="know-more">Know More</a>
                         </div>
                     </div>
                 </div>
@@ -67,9 +67,9 @@
                     <div class="trip-content">
                         <h3>Destination</h3>
                         <h5>price</h5>
-                        <div class="trip-btn">
-                            <input type="submit" value="Send Query" id="send-query">
-                            <input type="submit" value="Know More" id="know-more">
+                        <div class="trip-btn d-flex gap-2">
+                            <a href="send-query.php" class="btn btn-primary" id="send-query">Send Query</a>
+                            <a href="trip-show.php" class="btn" id="know-more">Know More</a>
                         </div>
                     </div>
                 </div>
@@ -81,9 +81,9 @@
                     <div class="trip-content">
                         <h3>Destination</h3>
                         <h5>price</h5>
-                        <div class="trip-btn">
-                            <input type="submit" value="Send Query" id="send-query">
-                            <input type="submit" value="Know More" id="know-more">
+                        <div class="trip-btn d-flex gap-2">
+                            <a href="send-query.php" class="btn btn-primary" id="send-query">Send Query</a>
+                            <a href="trip-show.php" class="btn" id="know-more">Know More</a>
                         </div>
                     </div>
                 </div>
@@ -93,9 +93,9 @@
                     <div class="trip-content">
                         <h3>Destination</h3>
                         <h5>price</h5>
-                        <div class="trip-btn">
-                            <input type="submit" value="Send Query" id="send-query">
-                            <input type="submit" value="Know More" id="know-more">
+                        <div class="trip-btn d-flex gap-2">
+                            <a href="send-query.php" class="btn btn-primary" id="send-query">Send Query</a>
+                            <a href="trip-show.php" class="btn" id="know-more">Know More</a>
                         </div>
                     </div>
                 </div>

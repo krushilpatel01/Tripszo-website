@@ -30,7 +30,7 @@
                 </div>
             </div>
             <div class="row my-4 justify-content-between">
-                <div class="col-9 contact-form">
+                <div class="col-sm-12 col-lg-9 contact-form">
                     <form action="" method="post">
                         <input type="text" name="name" id="" placeholder="Name">
                         <div class="conuntry-number d-flex">
@@ -48,7 +48,7 @@
                         <input type="submit" value="Send Message">
                     </form>
                 </div>
-                <div class="col-3 sign-up">
+                <div class="col-sm-12 col-lg-3 sign-up my-3">
                     <h3>Our Newsletter</h3>
                     <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quisquam ut
                         obcaecati

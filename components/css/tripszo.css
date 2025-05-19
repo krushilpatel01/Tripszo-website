@@ -37,6 +37,7 @@ body {
     height: 100vh;
     position: relative;
     z-index: 1;
+    overflow: visible !important;
 }
 
 .hero-pages {
@@ -291,7 +292,7 @@ header {
     }
 
     .destination-name {
-        font-size: 18vw;
+        font-size: 15vw;
     }
 
     .destination-search {
@@ -304,10 +305,9 @@ header {
 
     .destination-search button {
         width: 25%;
-        padding: 10px 0px;
+        padding: 8px 0px;
         right: 35px;
-        transform: translateY(10%);
-
+        transform: translateY(35%);
     }
 }
 
@@ -376,9 +376,15 @@ header {
     margin: 10px auto;
 }
 
-@media screen and (max-width:426px) {
+@media screen and (max-width:550px) {
     .service-card {
-        width: 48%;
+        width: 60%;
+    }
+}
+
+@media screen and (min-width:551px) and (max-width:768px) {
+    .service-card {
+        width: 30%;
     }
 }
 
@@ -647,14 +653,14 @@ header {
     transition: all 0.5s ease-in-out;
 }
 
-@media screen and (max-width:426px) {
+@media screen and (max-width:500px) {
     .plan-list .plan-box {
-        width: 100%;
+        width: 80%;
         margin: 10px auto;
     }
 }
 
-@media screen and (min-width:427px) and (max-width:767px) {
+@media screen and (min-width:501px) and (max-width:769px) {
     .plan-list .plan-box {
         width: 48%;
         margin: 10px auto;
@@ -824,18 +830,24 @@ footer {
 }
 
 .bg-txt {
-    width: 50%;
+    width: 80%;
     position: absolute;
-    font-size: 160px;
+    font-size: 150px;
     font-family: var(--main-title);
     font-weight: 800;
     text-shadow: 1px 1px 10px red;
-    top: 0;
+    top: 10%;
     bottom: 0;
-    left: 0;
+    left: 30%;
     right: 0;
     margin: 0 auto;
     opacity: 0.2;
+    z-index: 0;
+}
+
+.founder-image {
+    position: static;
+    z-index: 99;
 }
 
 .about-us-details h2 {
@@ -845,7 +857,27 @@ footer {
     margin-bottom: 20px;
 }
 
-/* our-journey-section */
+.about-us-details p {
+    text-align: justify;
+}
+
+@media (max-width:768px) {
+    .bg-txt {
+        width: 50%;
+        font-size: 100px;
+        top: 0%;
+        left: 0%;
+        margin: 0 auto;
+    }
+
+    .about-us-details {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+
+
 /* our-journey-section */
 .our-journey-section {
     margin-bottom: 100px;
@@ -894,10 +926,9 @@ footer {
     margin: 0 auto 5px;
 }
 
-/* Tooltip */
+/* Common tooltip style */
 .tooltip-box {
     position: absolute;
-    bottom: 120%;
     left: 50%;
     transform: translateX(-50%);
     background-color: #333;
@@ -906,12 +937,19 @@ footer {
     border-radius: 6px;
     white-space: nowrap;
     font-size: 12px;
-    display: none;
     z-index: 100;
+    display: none;
 }
 
+/* Show when JS adds 'show' class */
+.tooltip-box.show {
+    display: block;
+}
+
+/* Default for desktop */
 .step:hover .tooltip-box {
     display: block;
+    bottom: 120%;
 }
 
 /* Icon Circle */
@@ -969,17 +1007,10 @@ footer {
 
     .tooltip-box {
         position: absolute;
-        bottom: 10%;
-        right: 0;
+        top: 60px;
+        /* Adjust based on your spacing */
+        left: 50%;
         transform: translateX(-50%);
-        background-color: #333;
-        color: #fff;
-        padding: 6px 10px;
-        border-radius: 6px;
-        white-space: nowrap;
-        font-size: 12px;
-        display: none;
-        z-index: 100;
     }
 
     .step:hover .tooltip-box {
@@ -993,7 +1024,6 @@ footer {
         margin-bottom: 45px;
     }
 }
-
 
 /* 🔹 Mobile Specific */
 @media screen and (max-width: 576px) {
@@ -1026,8 +1056,11 @@ footer {
     }
 
     .tooltip-box {
-        display: none;
-        font-size: 11px;
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        /* margin-top: 10px; */
     }
 }
 
@@ -1140,6 +1173,21 @@ footer {
     font-weight: 800;
 }
 
+.td-icon {
+    padding: 10px 20px;
+    border: none;
+    background-color: #b9b2b2;
+    border-radius: 10px;
+}
+
+.view-more-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #000000;
+    color: white;
+    border-radius: 10px;
+}
+
 /* contact us page */
 .contact-page-wrapper {
     margin: 50px auto;
@@ -1183,7 +1231,7 @@ footer {
 }
 
 .contact-form {
-    width: 70%;
+    /* width: 70%; */
     background-color: var(--main-color);
     border-radius: 30px;
 }
@@ -1237,7 +1285,7 @@ form textarea {
 }
 
 .sign-up {
-    width: 28%;
+    /* width: 28%; */
     background-color: #b7adad;
     border-radius: 30px;
     padding: 20px;
@@ -1596,7 +1644,9 @@ form textarea {
     justify-content: center;
 }
 
-.form-container #loginForm, #registerForm, #forgotForm {
+.form-container #loginForm,
+#registerForm,
+#forgotForm {
     padding: 50px 30px;
 }
 
@@ -1794,4 +1844,208 @@ form textarea {
         font-size: 14px;
         margin-bottom: 8px;
     }
+}
+
+
+
+/* trip-show */
+/* ====================================================================== */
+.tab-btn {
+    border: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 500;
+    border-radius: 20px;
+    transition: background 0.3s;
+}
+
+.tab-btn.active {
+    background-color: #0057ff;
+    color: white;
+}
+
+.tab-content-box {
+    background-color: #eaeaea;
+    min-height: 440px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.price-box {
+    background-color: #0057ff;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+}
+
+.price-colour {
+    margin-left: 140px;
+    width: 100px;
+    line-height: 6px;
+    border-radius: 10px;
+    height: 30px;
+    background-color: white;
+    color: #C20D0D;
+    padding: 10px 18px;
+}
+
+.price-summary {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.share-btn span {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.share-btn span:hover {
+    background-color: #A8A308;
+    color: white;
+}
+
+.btn-blue {
+    background-color: #0057ff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+}
+
+@media (max-width: 426px) {
+    .tab-content-box {
+        margin-bottom: 40px;
+    }
+
+    .price-colour {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .tab-content-box {
+        margin-bottom: 40px;
+    }
+
+    .price-colour {
+        margin-left: 35px;
+    }
+}
+
+
+
+/* review layput design  */
+
+
+
+.testimonial-card {
+    border-radius: 20px;
+    padding: 20px;
+    color: white;
+    margin: 10px 0;
+    background-color: #0047b3;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease-in-out forwards;
+}
+
+.testimonial-light {
+    background-color: #b3cfff;
+    color: #f1f1f1;
+}
+
+.profile-circle {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 12px;
+}
+
+.customer-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.customer-name {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.star-rating {
+    color: #ffd700;
+    font-size: 16px;
+}
+
+@media (max-width: 576px) {
+    .customer-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-circle {
+        margin: 0 0 8px 0;
+    }
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Delay animation per card */
+.testimonial-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.testimonial-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.testimonial-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.testimonial-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.testimonial-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.testimonial-card:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+
+.trip-information {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.icon-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+}
+
+.icon-list li {
+    font-size: 1rem;
 }

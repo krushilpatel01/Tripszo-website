@@ -48,7 +48,6 @@ include "components/header-footer/header.php";
     </div>
 </section>
 
-
 <!-- destination wrapper -->
 <section class="desctination-wrapper">
     <div class="container">
@@ -190,7 +189,7 @@ include "components/header-footer/header.php";
     <div class="container">
         <h2 class="centerd-title">Customer Reviews</h2>
         <div class="row client-review-list">
-            <div class="col-4">
+            <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="client-review mb-2">
                     <div class="client-info d-flex align-items-center mb-4">
                         <div class="client-img"><img src="components/images" alt="" srcset=""></div>
@@ -226,7 +225,7 @@ include "components/header-footer/header.php";
                         facilis non perferendis, dolorum sed impedit obcaecati.</p>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-sm-12 col-md-6 col-lg-4 sm-mt-2">
                 <div class="client-review mb-2 bg-primary">
                     <div class="client-info d-flex align-items-center mb-4">
                         <div class="client-img"><img src="components/images" alt="" srcset=""></div>
@@ -262,7 +261,7 @@ include "components/header-footer/header.php";
                         facilis non perferendis, dolorum sed impedit obcaecati.</p>
                 </div>
             </div>
-            <div class="col-4 video-box"></div>
+            <div class="col-sm-12 col-lg-4 video-box"></div>
         </div>
     </div>
 </section>
