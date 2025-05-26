@@ -106,7 +106,7 @@
     <section class="trips-image-gallery">
         <div class="container">
             <h2 class="centerd-title">Why Travel With Us?</h2>
-            <div class="row travel-images-list">
+            <div class="row travel-images-list gx-4">
                 <div class="col-sm-12 col-md-4 travel-images-wrapper">
                     <div class="travel-img-box1"></div>
                     <div class="travel-img-box2"></div>

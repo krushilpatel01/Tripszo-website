@@ -20,7 +20,8 @@
 
     <section class="trip-section-wrapper">
         <div class="container">
-            <h2 class="centerd-title" style="font-size: 46px; color:blue">UPCOMING <span style="color:black;">TRIPS</span></h2>
+            <h2 class="centerd-title" style="font-size: 46px; color:blue">UPCOMING <span
+                    style="color:black;">TRIPS</span></h2>
             <div class="row trips-wrapper">
                 <div class="col-lg-4 trip-card-3">
                     <div class="trip-price-toltip">Rs 500/- OFF</div>
@@ -101,7 +102,7 @@
     <section class="trips-image-gallery">
         <div class="container">
             <h2 class="centerd-title">Why Travel With Us?</h2>
-            <div class="row travel-images-list">
+            <div class="row travel-images-list gx-4">
                 <div class="col-sm-12 col-md-4 travel-images-wrapper">
                     <div class="travel-img-box1"></div>
                     <div class="travel-img-box2"></div>

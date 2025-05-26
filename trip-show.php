@@ -22,24 +22,28 @@
         <div class="row">
             <!-- Left column: Big Image -->
             <div class="col-md-6 m-0">
-                <img src="components/images/trip-page-image2.png" class="img-fluid w-100 h-100 rounded shadow" alt="Big Image"
-                    style="object-fit: cover;">
+                <img src="components/images/trip-page-image2.png" class="img-fluid w-100 h-100 rounded shadow"
+                    alt="Big Image" style="object-fit: cover;">
             </div>
 
             <!-- Right column: 4 Small Images -->
             <div class="col-md-6">
                 <div class="row g-3">
                     <div class="col-6">
-                        <img src="components/images/trip-page-image3.png" class="img-fluid rounded shadow" alt="Small Image 1">
+                        <img src="components/images/trip-page-image3.png" class="img-fluid rounded shadow"
+                            alt="Small Image 1">
                     </div>
                     <div class="col-6">
-                        <img src="components/images/trip-page-image4.png" class="img-fluid rounded shadow" alt="Small Image 2">
+                        <img src="components/images/trip-page-image4.png" class="img-fluid rounded shadow"
+                            alt="Small Image 2">
                     </div>
                     <div class="col-6">
-                        <img src="components/images/trip-page-image5.png" class="img-fluid rounded shadow" alt="Small Image 3">
+                        <img src="components/images/trip-page-image5.png" class="img-fluid rounded shadow"
+                            alt="Small Image 3">
                     </div>
                     <div class="col-6">
-                        <img src="components/images/trip-page-image3.png" class="img-fluid rounded shadow" alt="Small Image 4">
+                        <img src="components/images/trip-page-image3.png" class="img-fluid rounded shadow"
+                            alt="Small Image 4">
                     </div>
                 </div>
             </div>
@@ -116,7 +120,9 @@
                             <h2 id="room-type">QUAD</h2>
                             <p><del>Rs 0,000</del> <strong class="text-primary">Rs 0,000</strong> Per Person</p>
                         </div>
-                        <button class="btn-blue w-100">BOOK NOW</button>
+                        <a href="booking.php" class="w-100 d-block">
+                            <button class="btn-blue w-100">BOOK NOW</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -209,6 +215,73 @@
             </div>
         </div>
     </section>
+
+    <script>
+    let currentPerk = 'perk1';
+
+    const allContent = {
+        'perk1': {
+            'overview': 'Perk 1 Overview: Explore historical landmarks and iconic sites.',
+            'itinerary': 'Perk 1 Itinerary: Day 1 - City Tour, Day 2 - Museum Visit.',
+            'inclusions': 'Perk 1 Inclusions: Guided tours, transportation.',
+            'exclusions': 'Perk 1 Exclusions: Meals, personal expenses.',
+            'things': 'Perk 1 Things To Pack: Comfortable shoes, sunscreen, camera.'
+        },
+        'perk2': {
+            'overview': 'Perk 2 Overview: Enjoy culinary delights and cultural shows.',
+            'itinerary': 'Perk 2 Itinerary: Day 1 - Cooking Class, Day 2 - Local Market Tour.',
+            'inclusions': 'Perk 2 Inclusions: Food tasting, show tickets.',
+            'exclusions': 'Perk 2 Exclusions: Flights, alcohol.',
+            'things': 'Perk 2 Things To Pack: Appetite, reusable bag, casual wear.'
+        },
+        'perk3': {
+            'overview': 'Perk 3 Overview: Adventure-filled trip with thrill activities.',
+            'itinerary': 'Perk 3 Itinerary: Day 1 - Trekking, Day 2 - River Rafting.',
+            'inclusions': 'Perk 3 Inclusions: Gear, guides, safety equipment.',
+            'exclusions': 'Perk 3 Exclusions: Insurance, meals.',
+            'things': 'Perk 3 Things To Pack: Hiking boots, water bottle, gloves.'
+        },
+        'perk4': {
+            'overview': 'Perk 4 Overview: Relaxing escape with spa and wellness.',
+            'itinerary': 'Perk 4 Itinerary: Day 1 - Spa session, Day 2 - Yoga class.',
+            'inclusions': 'Perk 4 Inclusions: Spa access, organic meals.',
+            'exclusions': 'Perk 4 Exclusions: Extra treatments, flights.',
+            'things': 'Perk 4 Things To Pack: Yoga mat, swimsuit, sandals.'
+        },
+        'perk5': {
+            'overview': 'Perk 5 Overview: Family fun with kids-focused activities.',
+            'itinerary': 'Perk 5 Itinerary: Day 1 - Theme Park, Day 2 - Zoo visit.',
+            'inclusions': 'Perk 5 Inclusions: Entry passes, child care.',
+            'exclusions': 'Perk 5 Exclusions: Toys, meals.',
+            'things': 'Perk 5 Things To Pack: Snacks, water bottles, extra clothes.'
+        }
+    };
+
+    function showTab(tab, event) {
+        const content = allContent[currentPerk][tab];
+        document.getElementById('tab-content').innerHTML = `<p>${content}</p>`;
+
+        const buttons = document.querySelectorAll('.tab-btn');
+        buttons.forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+    }
+
+    function setRoom(type) {
+        document.getElementById('room-type').innerText = type.toUpperCase();
+    }
+
+    function selectPerk(el, perkId) {
+        document.querySelectorAll('.perk-item').forEach(item => item.classList.remove('active'));
+        el.classList.add('active');
+        currentPerk = perkId;
+
+        const activeTab = document.querySelector('.tab-btn.active');
+        if (activeTab) {
+            const tabName = activeTab.textContent.trim().toLowerCase();
+            showTab(tabName, activeTab);
+        }
+    }
+    </script>
 
 
     <!-- footer addd -->

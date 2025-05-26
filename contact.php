@@ -48,13 +48,13 @@
                         <input type="submit" value="Send Message">
                     </form>
                 </div>
-                <div class="col-sm-12 col-lg-3 sign-up my-3">
-                    <h3>Our Newsletter</h3>
+                <div class="col-sm-12 col-lg-3 sign-up">
+                    <h3><b> Our <br> Newsletter</b></h3>
                     <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quisquam ut
                         obcaecati
                         tenetur sint.
                         Pariatur repellendus esse deleniti asperiores nemo!</p>
-                    <input type="email" name="email" id="" placeholder="sign up for Newsletter">
+                    <input type="email" name="email" id="" placeholder="Sign up for Newsletter">
                     <input type="submit" value="Sign Up" id="sing-up-btn">
                 </div>
             </div>

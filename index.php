@@ -1,3 +1,14 @@
+<?php
+// session_start();
+// if (!isset($_SESSION['user_id'])) {
+//     header("Location: login.php");
+//     exit;
+// }
+// else{
+//     echo $_SESSION['user_name'];
+//     }
+?>
+
 <!-- include header from header folder -->
 <?php
 include "components/header-footer/header.php";
@@ -270,7 +281,7 @@ include "components/header-footer/header.php";
 <section class="travel-images-section">
     <div class="container">
         <h2 class="centerd-title">Why Travel With Us ?</h2>
-        <div class="row travel-images-list">
+        <div class="row travel-images-list gx-4">
             <div class="col-sm-12 col-md-4 travel-images-wrapper">
                 <div class="travel-img-box1"></div>
                 <div class="travel-img-box2"></div>
@@ -286,6 +297,7 @@ include "components/header-footer/header.php";
         </div>
     </div>
 </section>
+
 
 <!-- footer addd -->
 <?php

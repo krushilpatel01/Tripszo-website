@@ -56,7 +56,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Login</a>
+                                <a class="nav-link" href="login.php">Login</a>
                             </li>
                         </ul>
                     </div>
@@ -181,32 +181,28 @@
     <!-- founder section -->
     <section class="founder-section">
         <div class="container">
-            <div class="row p-1 align-items-center flex-wrap-reverse">
+            <div class="row p-1 align-items-center flex-wrap-reverse fade-in-section">
                 <div class="col-sm-12 col-md-6 col-lg-6 founder-detail p-3">
                     <h2>Founder</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio fugiat, ea suscipit esse
-                        consectetur maxime facere, cum possimus, molestias eligendi deleniti ducimus exercitationem
-                        dolores!
-                        Excepturi doloremque ea soluta corporis quidem!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-6 founder-image">
-                    <img src="components/images/founder.png" alt="" srcset="">
+                    <img src="components/images/founder.png" alt="">
                 </div>
             </div>
-            <div class="row p-1 align-items-center">
+
+            <div class="row p-1 align-items-center fade-in-section">
                 <div class="col-sm-12 col-md-6 col-lg-6 founder-image">
-                    <img src="components/images/founder.png" alt="" srcset="">
+                    <img src="components/images/founder.png" alt="">
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-6 founder-detail p-3">
                     <h2>Co - Founder</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio fugiat, ea suscipit esse
-                        consectetur maxime facere, cum possimus, molestias eligendi deleniti ducimus exercitationem
-                        dolores!
-                        Excepturi doloremque ea soluta corporis quidem!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- our team member -->
     <section class="our-team-wrapper">
@@ -238,6 +234,24 @@
         </div>
     </section>
 
+
+    <script>
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target); // Only trigger once
+            }
+        });
+    }, {
+        threshold: 0.2 // Adjust how much of the section must be visible
+    });
+
+    document.querySelectorAll('.fade-in-section').forEach(section => {
+        observer.observe(section);
+    });
+    </script>
+ś
     <!-- footer addd -->
     <?php
   include "components/header-footer/footer.php";

@@ -1,54 +1,73 @@
 <!-- footer.php -->
 <!-- Start of Footer -->
-<div class="footer-img"><img src="components/images/footer-icons.png"
+<div class="footer-img">
+    <img src="components/images/footer-icons.png"
         style="width: 100%; height: 100%;
-    filter:brightness(0) saturate(100%) invert(20%) sepia(500%) saturate(532%) hue-rotate(194deg) brightness(100%) contrast(200%)" alt="" srcset=""></div>
-<footer>
+        filter:brightness(0) saturate(100%) invert(20%) sepia(500%) saturate(532%) hue-rotate(194deg) brightness(100%) contrast(200%)" alt="">
+</div>
+
+<footer class="pt-5 pb-3 text-white">
     <div class="container">
         <div class="row justify-content-between align-items-center mb-4">
-            <div class="col-lg-3 foote-logo"><img src="components/images/hero-image1.jpg" alt="" srcset=""></div>
-            <div class="col-lg-9 d-flex mt-5">
-                <ul class="w-100 w-sm-50 w-lg-25 footer-links px-2"
-                    style="list-style: none; text-align: left; cursor: pointer;">
-                    <li class="footer-heading">Menu</li>
-                    <li class="my-2"><a href="index.php" style="color:white; text-decoration: none;">Home</a></li>
-                    <li class="my-2"><a href="about.php" style="color:white; text-decoration: none;">About Us</a></li>
-                    <li class="my-2"><a href="blog.php" style="color:white; text-decoration: none;">Blog</a></li>
-                    <li class="my-2"><a href="contact.php" style="color:white; text-decoration: none;">Contact Us</a>
-                    </li>
-                </ul>
-
-                <ul class="w-100 w-sm-50 w-lg-25 footer-links px-2"
-                    style="list-style: none; text-align: left; cursor: pointer;">
-                    <li class="footer-heading">All Trips</li>
-                    <li class="my-2">Weekend Trips</li>
-                    <li class="my-2">International Trips</li>
-                    <li class="my-2">Upcoming Trips</li>
-                </ul>
-
-                <ul class="w-100 w-sm-50 w-lg-25 footer-links px-2"
-                    style="list-style: none; text-align: left; cursor: pointer;">
-                    <li class="footer-heading">Social Links</li>
-                    <li class="my-2">Instagram</li>
-                    <li class="my-2">Facebook</li>
-                    <li class="my-2">LinkedIn</li> <!-- corrected spelling -->
-                    <li class="my-2">Google Maps</li>
-                </ul>
-
-                <ul class="w-100 w-sm-50 w-lg-25 footer-links px-2"
-                    style="list-style: none; text-align: left; cursor: pointer;">
-                    <li class="footer-heading">Contact</li>
-                    <li class="my-2">Number</li>
-                    <li class="my-2">Email</li>
-                    <li class="my-2">Address</li>
-                </ul>
+            <!-- Logo -->
+            <div class="col-lg-3 mb-4 mb-lg-0">
+                <img src="components/images/hero-image1.jpg" alt="Logo" class="img-fluid foote-logo">
             </div>
 
+            <!-- Links -->
+            <div class="col-lg-9">
+                <div class="row">
+                    <!-- Menu -->
+                    <div class="col-6 col-md-3 mb-4">
+                        <ul class="list-unstyled text-start">
+                            <li class="footer-heading fw-bold mb-2">Menu</li>
+                            <li><a href="index.php" class="text-white text-decoration-none">Home</a></li>
+                            <li><a href="about.php" class="text-white text-decoration-none">About Us</a></li>
+                            <li><a href="blog.php" class="text-white text-decoration-none">Blog</a></li>
+                            <li><a href="contact.php" class="text-white text-decoration-none">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Trips -->
+                    <div class="col-6 col-md-3 mb-4">
+                        <ul class="list-unstyled text-start">
+                            <li class="footer-heading fw-bold mb-2">All Trips</li>
+                            <li>Weekend Trips</li>
+                            <li>International Trips</li>
+                            <li>Upcoming Trips</li>
+                        </ul>
+                    </div>
+
+                    <!-- Social -->
+                    <div class="col-6 col-md-3 mb-4">
+                        <ul class="list-unstyled text-start">
+                            <li class="footer-heading fw-bold mb-2">Social Links</li>
+                            <li>Instagram</li>
+                            <li>Facebook</li>
+                            <li>LinkedIn</li>
+                            <li>Google Maps</li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact -->
+                    <div class="col-6 col-md-3 mb-4">
+                        <ul class="list-unstyled text-start">
+                            <li class="footer-heading fw-bold mb-2">Contact</li>
+                            <li>Number</li>
+                            <li>Email</li>
+                            <li>Address</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <hr class="bg-light">
+        <div class="text-center small">© 2025 Your Company. All rights reserved.</div>
     </div>
-    <hr>
 </footer>
 <!-- End of Footer -->
+
 
 <!-- Link JS file -->
 <script src="components/js/main.js"></script>
@@ -64,6 +83,8 @@
 
 <!-- Initialize Swiper -->
 <script>
+let previousIndex = 0;
+
 var swiper = new Swiper(".mySwiper", {
     spaceBetween: 30,
     centeredSlides: true,
@@ -79,8 +100,37 @@ var swiper = new Swiper(".mySwiper", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+    on: {
+        init: function() {
+            const activeSlide = document.querySelector('.swiper-slide-active');
+            const destinationTitle = activeSlide.querySelector('.destination-name');
+            if (destinationTitle) {
+                destinationTitle.classList.add('animate-up');
+            }
+            previousIndex = this.activeIndex;
+        },
+        slideChangeTransitionStart: function() {
+            document.querySelectorAll('.destination-name').forEach(el => {
+                el.classList.remove('animate-up', 'animate-down');
+                el.style.opacity = '0';
+            });
+        },
+        slideChangeTransitionEnd: function() {
+            const activeSlide = document.querySelector('.swiper-slide-active');
+            const destinationTitle = activeSlide.querySelector('.destination-name');
+            if (destinationTitle) {
+                if (this.activeIndex > previousIndex) {
+                    destinationTitle.classList.add('animate-up');
+                } else {
+                    destinationTitle.classList.add('animate-down');
+                }
+            }
+            previousIndex = this.activeIndex;
+        }
+    }
 });
 </script>
+
 </body>
 
 </html>

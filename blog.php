@@ -121,7 +121,7 @@
             <div class="row my-5 d-flex align-items-center">
                 <div class="col-2"><button type="submit" class="td-icon">Plane 3d Icon</button></div>
                 <div class="col-8 px-1">
-                    <hr style="width:80%">
+                    <hr style="width:100%">
                 </div>
                 <div class="col-2 d-flex justify-content-end">
                     <button type="submit" class="view-more-btn">View More</button>
