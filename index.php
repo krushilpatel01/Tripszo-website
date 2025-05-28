@@ -67,9 +67,11 @@ include "components/header-footer/header.php";
             <div class="col-sm-12 col-md-6 col-lg-4 desctination-img">
                 <img src="components/images/destination-img1.png" alt="" srcset="">
                 <div class="dest-box">
-                    <span class="d-flex align-items-center justify-content-between px-3">
-                        <h3>See More</h3><i class="fa-solid fa-arrow-right fa-sm" style="color:#0C3EB2;"></i>
-                    </span>
+                    <a href="trip-show.php" class="d-flex align-items-center justify-content-between px-3"
+                        style="color:#0C3EB2; text-decoration: none;">
+                        <h3>See More</h3>
+                        <i class="fa-solid fa-arrow-right fa-sm"></i>
+                    </a>
                     <hr>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius labore quae necessitatibus eveniet
                         voluptatibus consequuntur?</p>
@@ -79,9 +81,11 @@ include "components/header-footer/header.php";
             <div class="col-sm-12 col-md-6 col-lg-4 desctination-img"><img src="components/images/destination-img2.png"
                     alt="" srcset="">
                 <div class="dest-box">
-                    <span class="d-flex align-items-center justify-content-between px-3">
-                        <h3>See More</h3><i class="fa-solid fa-arrow-right fa-sm" style="color:#0C3EB2;"></i>
-                    </span>
+                    <a href="trip-show.php" class="d-flex align-items-center justify-content-between px-3"
+                        style="color:#0C3EB2; text-decoration: none;">
+                        <h3>See More</h3>
+                        <i class="fa-solid fa-arrow-right fa-sm"></i>
+                    </a>
                     <hr>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius labore quae necessitatibus eveniet
                         voluptatibus consequuntur?</p>
@@ -91,9 +95,11 @@ include "components/header-footer/header.php";
             <div class="col-sm-12 col-md-6 col-lg-4 desctination-img"><img src="components/images/destination-img1.png"
                     alt="" srcset="">
                 <div class="dest-box">
-                    <span class="d-flex align-items-center justify-content-between px-3">
-                        <h3>See More</h3><i class="fa-solid fa-arrow-right fa-sm" style="color:#0C3EB2;"></i>
-                    </span>
+                    <a href="trip-show.php" class="d-flex align-items-center justify-content-between px-3"
+                        style="color:#0C3EB2; text-decoration: none;">
+                        <h3>See More</h3>
+                        <i class="fa-solid fa-arrow-right fa-sm"></i>
+                    </a>
                     <hr>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius labore quae necessitatibus eveniet
                         voluptatibus consequuntur?</p>
@@ -103,9 +109,11 @@ include "components/header-footer/header.php";
             <div class="col-sm-12 col-md-6 col-lg-4 desctination-img">
                 <img src="components/images/destination-img1.png" alt="" srcset="">
                 <div class="dest-box">
-                    <span class="d-flex align-items-center justify-content-between px-3">
-                        <h3>See More</h3><i class="fa-solid fa-arrow-right fa-sm" style="color:#0C3EB2;"></i>
-                    </span>
+                    <a href="trip-show.php" class="d-flex align-items-center justify-content-between px-3"
+                        style="color:#0C3EB2; text-decoration: none;">
+                        <h3>See More</h3>
+                        <i class="fa-solid fa-arrow-right fa-sm"></i>
+                    </a>
                     <hr>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius labore quae necessitatibus eveniet
                         voluptatibus consequuntur?</p>
@@ -115,9 +123,11 @@ include "components/header-footer/header.php";
             <div class="col-sm-12 col-md-6 col-lg-4 desctination-img"><img src="components/images/destination-img2.png"
                     alt="" srcset="">
                 <div class="dest-box">
-                    <span class="d-flex align-items-center justify-content-between px-3">
-                        <h3>See More</h3><i class="fa-solid fa-arrow-right fa-sm" style="color:#0C3EB2;"></i>
-                    </span>
+                    <a href="trip-show.php" class="d-flex align-items-center justify-content-between px-3"
+                        style="color:#0C3EB2; text-decoration: none;">
+                        <h3>See More</h3>
+                        <i class="fa-solid fa-arrow-right fa-sm"></i>
+                    </a>
                     <hr>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius labore quae necessitatibus eveniet
                         voluptatibus consequuntur?</p>
@@ -127,9 +137,11 @@ include "components/header-footer/header.php";
             <div class="col-sm-12 col-md-6 col-lg-4 desctination-img"><img src="components/images/destination-img1.png"
                     alt="" srcset="">
                 <div class="dest-box">
-                    <span class="d-flex align-items-center justify-content-between px-3">
-                        <h3>See More</h3><i class="fa-solid fa-arrow-right fa-sm" style="color:#0C3EB2;"></i>
-                    </span>
+                    <a href="trip-show.php" class="d-flex align-items-center justify-content-between px-3"
+                        style="color:#0C3EB2; text-decoration: none;">
+                        <h3>See More</h3>
+                        <i class="fa-solid fa-arrow-right fa-sm"></i>
+                    </a>
                     <hr>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius labore quae necessitatibus eveniet
                         voluptatibus consequuntur?</p>
@@ -200,10 +212,10 @@ include "components/header-footer/header.php";
     <div class="container">
         <h2 class="centerd-title">Customer Reviews</h2>
         <div class="row client-review-list">
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="client-review mb-2">
+            <div class="col-sm-12 col-md-6 col-lg-4 px-2">
+                <div class="client-review mb-3">
                     <div class="client-info d-flex align-items-center mb-4">
-                        <div class="client-img"><img src="components/images" alt="" srcset=""></div>
+                        <div class="client-img"><img src="components/images/person.png" alt="" srcset=""></div>
                         <div class="client-name">
                             <h2>Customer Name</h2>
                             <div class="icon"><span><i class="fa-solid fa-star me-1"
@@ -220,7 +232,7 @@ include "components/header-footer/header.php";
                 </div>
                 <div class="client-review bg-primary">
                     <div class="client-info d-flex align-items-center mb-4">
-                        <div class="client-img"><img src="components/images" alt="" srcset=""></div>
+                        <div class="client-img"><img src="components/images/person.png" alt="" srcset=""></div>
                         <div class="client-name">
                             <h2>Customer Name</h2>
                             <div class="icon"><span><i class="fa-solid fa-star me-1"
@@ -236,10 +248,10 @@ include "components/header-footer/header.php";
                         facilis non perferendis, dolorum sed impedit obcaecati.</p>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 sm-mt-2">
-                <div class="client-review mb-2 bg-primary">
+            <div class="col-sm-12 col-md-6 col-lg-4 px-2">
+                <div class="client-review bg-primary mb-3">
                     <div class="client-info d-flex align-items-center mb-4">
-                        <div class="client-img"><img src="components/images" alt="" srcset=""></div>
+                        <div class="client-img"><img src="components/images/person.png" alt="" srcset=""></div>
                         <div class="client-name">
                             <h2>Customer Name</h2>
                             <div class="icon"><span><i class="fa-solid fa-star me-1"
@@ -256,7 +268,7 @@ include "components/header-footer/header.php";
                 </div>
                 <div class="client-review">
                     <div class="client-info d-flex align-items-center mb-4">
-                        <div class="client-img"><img src="components/images" alt="" srcset=""></div>
+                        <div class="client-img"><img src="components/images/person.png" alt="" srcset=""></div>
                         <div class="client-name">
                             <h2>Customer Name</h2>
                             <div class="icon"><span><i class="fa-solid fa-star me-1"
@@ -272,7 +284,9 @@ include "components/header-footer/header.php";
                         facilis non perferendis, dolorum sed impedit obcaecati.</p>
                 </div>
             </div>
-            <div class="col-sm-12 col-lg-4 video-box"></div>
+            <div class="col-sm-12 col-md-12 col-lg-4 video-box px-2 md-m-3">
+                <!-- <h2>video box</h2> -->
+            </div>
         </div>
     </div>
 </section>

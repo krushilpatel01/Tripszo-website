@@ -19,15 +19,15 @@
     <!-- header over -->
 
     <div class="container mt-4">
-        <div class="row">
+        <div class="row trip-show-wrapper">
             <!-- Left column: Big Image -->
-            <div class="col-md-6 m-0">
+            <div class="col-md-6 m-0 trip-show-main-img">
                 <img src="components/images/trip-page-image2.png" class="img-fluid w-100 h-100 rounded shadow"
                     alt="Big Image" style="object-fit: cover;">
             </div>
 
             <!-- Right column: 4 Small Images -->
-            <div class="col-md-6">
+            <div class="col-md-6 trip-show-portfolio">
                 <div class="row g-3">
                     <div class="col-6">
                         <img src="components/images/trip-page-image3.png" class="img-fluid rounded shadow"

@@ -25,8 +25,8 @@
             <!-- First Blog Section -->
             <div class="row gy-4 align-items-stretch mb-5">
                 <!-- Left Blog -->
-                <div class="col-12 col-lg-6">
-                    <div class="card h-100 shadow-sm">
+                <div class="col-12 col-lg-6 d-flex">
+                    <div class="card shadow-sm w-100">
                         <img src="components/images/blog-1.png" class="card-img-top" alt="Blog Image">
                         <div class="card-body">
                             <h3 class="card-title">Blog Title</h3>
@@ -39,13 +39,13 @@
                 </div>
 
                 <!-- Right Blog Combo -->
-                <div class="col-12 col-lg-6">
-                    <div class="row d-flex gy-4">
-                        <div class="col-6">
-                            <div class="card h-100 shadow-sm">
+                <div class="col-12 col-lg-6 d-flex">
+                    <div class="row w-100 gy-4 mx-auto">
+                        <div class="col-6 d-flex">
+                            <div class="card shadow-sm w-100">
                                 <img src="components/images/blog-1.png" class="card-img-top" alt="Blog Image">
                                 <div class="card-body">
-                                    <h3 class="card-title">Blog Title</h3>
+                                    <h5 class="card-title">Blog Title</h5>
                                     <p class="card-text">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio excepturi quidem
                                         alias repudiandae ipsum quod sequi repellendus, minus voluptatum ratione.
@@ -54,11 +54,11 @@
                             </div>
                         </div>
 
-                        <div class="col-6">
-                            <div class="card h-100 shadow-sm">
+                        <div class="col-6 d-flex">
+                            <div class="card shadow-sm w-100">
                                 <img src="components/images/blog-1.png" class="card-img-top" alt="Blog Image">
                                 <div class="card-body">
-                                    <h3 class="card-title">Blog Title</h3>
+                                    <h5 class="card-title">Blog Title</h5>
                                     <p class="card-text">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio excepturi quidem
                                         alias repudiandae ipsum quod sequi repellendus, minus voluptatum ratione.
@@ -70,11 +70,43 @@
                 </div>
             </div>
 
+
             <!-- Second Blog Section -->
-            <div class="row gy-4 align-items-stretch flex-lg-row-reverse">
+            <div class="row gy-4 align-items-stretch mb-5">
+                <!-- Right Blog Combo -->
+                <div class="col-12 col-lg-6 d-flex">
+                    <div class="row w-100 gy-4 mx-auto">
+                        <div class="col-6 d-flex">
+                            <div class="card shadow-sm w-100">
+                                <img src="components/images/blog-1.png" class="card-img-top" alt="Blog Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Blog Title</h5>
+                                    <p class="card-text">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio excepturi quidem
+                                        alias repudiandae ipsum quod sequi repellendus, minus voluptatum ratione.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 d-flex">
+                            <div class="card shadow-sm w-100">
+                                <img src="components/images/blog-1.png" class="card-img-top" alt="Blog Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">Blog Title</h5>
+                                    <p class="card-text">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio excepturi quidem
+                                        alias repudiandae ipsum quod sequi repellendus, minus voluptatum ratione.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Left Blog -->
-                <div class="col-12 col-lg-6">
-                    <div class="card h-100 shadow-sm">
+                <div class="col-12 col-lg-6 d-flex">
+                    <div class="card shadow-sm w-100">
                         <img src="components/images/blog-1.png" class="card-img-top" alt="Blog Image">
                         <div class="card-body">
                             <h3 class="card-title">Blog Title</h3>
@@ -82,37 +114,6 @@
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio excepturi quidem alias
                                 repudiandae ipsum quod sequi repellendus, minus voluptatum ratione.
                             </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Blog Combo -->
-                <div class="col-12 col-lg-6">
-                    <div class="row d-flex gy-4">
-                        <div class="col-6">
-                            <div class="card h-100 shadow-sm">
-                                <img src="components/images/blog-1.png" class="card-img-top" alt="Blog Image">
-                                <div class="card-body">
-                                    <h3 class="card-title">Blog Title</h3>
-                                    <p class="card-text">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio excepturi quidem
-                                        alias repudiandae ipsum quod sequi repellendus, minus voluptatum ratione.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-6">
-                            <div class="card h-100 shadow-sm">
-                                <img src="components/images/blog-1.png" class="card-img-top" alt="Blog Image">
-                                <div class="card-body">
-                                    <h3 class="card-title">Blog Title</h3>
-                                    <p class="card-text">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio excepturi quidem
-                                        alias repudiandae ipsum quod sequi repellendus, minus voluptatum ratione.
-                                    </p>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

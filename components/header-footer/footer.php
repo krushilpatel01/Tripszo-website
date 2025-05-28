@@ -86,6 +86,7 @@
 let previousIndex = 0;
 
 var swiper = new Swiper(".mySwiper", {
+    speed: 1000,
     spaceBetween: 30,
     centeredSlides: true,
     autoplay: {
@@ -99,6 +100,17 @@ var swiper = new Swiper(".mySwiper", {
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
+    },
+    effect: 'creative',
+    creativeEffect: {
+        prev: {
+            // Show previous slide from left
+            translate: ['-100%', 0, 0],
+        },
+        next: {
+            // Show next slide from right
+            translate: ['100%', 0, 0],
+        }
     },
     on: {
         init: function() {
@@ -124,11 +136,129 @@ var swiper = new Swiper(".mySwiper", {
                 } else {
                     destinationTitle.classList.add('animate-down');
                 }
+                destinationTitle.style.opacity = '1';
             }
             previousIndex = this.activeIndex;
         }
     }
 });
+</script>
+
+
+
+<!-- latest slider javascript -->
+<!-- Scripts -->
+<script>
+// Navbar Dropdown Script
+const button = document.getElementById('dropdownButton');
+const menu = document.getElementById('dropdownMenu');
+
+button.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+});
+
+window.addEventListener('click', (e) => {
+    if (!button.contains(e.target) && !menu.contains(e.target)) {
+        menu.classList.add('hidden');
+    }
+});
+
+// Hero Section Sliding Animation
+const rightArrow = document.querySelector('.arrow-right');
+const leftArrow = document.querySelector('.arrow-left');
+const heroImage = document.querySelector('.hero-image');
+const heroImage2 = document.querySelector('.hero-image2');
+const dynamicTitle = document.getElementById('dynamicTitle');
+
+let currentState = 0; // 0: heroimage (KERALA), 1: heroimage2 (TUNGNATH), 2: heroimage3 (KASHMIR)
+let autoSlideInterval; // To store the interval ID for auto-slide
+
+// Array of titles corresponding to each slide
+const titles = ['KERALA', 'TUNGNATH', 'KASHMIR'];
+
+// Function to update the title with slide-up animation
+function updateTitle(state) {
+    dynamicTitle.textContent = titles[state];
+    dynamicTitle.classList.remove('slide-up'); // Remove previous animation
+    void dynamicTitle.offsetWidth; // Trigger reflow to restart animation
+    dynamicTitle.classList.add('slide-up'); // Apply slide-up animation
+}
+
+// Function to reset clip-path and ensure animation replay
+function resetClipPath(element, direction) {
+    element.classList.remove('curtain-left', 'curtain-right');
+    if (direction === 'left') {
+        element.style.clipPath = 'inset(0 0 0 0)';
+    } else if (direction === 'right') {
+        element.style.clipPath = 'inset(0 100% 0 0)';
+    }
+    void element.offsetWidth;
+}
+
+// Function to slide to the next image (used for auto-slide and right arrow)
+function slideNext() {
+    if (currentState === 0) {
+        resetClipPath(heroImage, 'left');
+        heroImage.classList.add('curtain-left');
+        currentState = 1;
+    } else if (currentState === 1) {
+        resetClipPath(heroImage2, 'left');
+        heroImage2.classList.add('curtain-left');
+        currentState = 2;
+    } else if (currentState === 2) {
+        resetClipPath(heroImage2, 'right');
+        resetClipPath(heroImage, 'right');
+        heroImage2.classList.add('curtain-right');
+        heroImage.classList.add('curtain-right');
+        currentState = 0;
+    }
+    // Delay title update until image animation completes (2 seconds)
+    setTimeout(() => {
+        updateTitle(currentState);
+    }, 2000);
+}
+
+// Function to slide to the previous image (used for left arrow)
+function slidePrevious() {
+    if (currentState === 2) {
+        resetClipPath(heroImage2, 'right');
+        heroImage2.classList.add('curtain-right');
+        currentState = 1;
+    } else if (currentState === 1) {
+        resetClipPath(heroImage, 'right');
+        heroImage.classList.add('curtain-right');
+        currentState = 0;
+    }
+    // Delay title update until image animation completes (2 seconds)
+    setTimeout(() => {
+        updateTitle(currentState);
+    }, 2000);
+}
+
+// Function to start or restart the auto-slide interval
+function startAutoSlide() {
+    if (autoSlideInterval) {
+        clearInterval(autoSlideInterval);
+    }
+    autoSlideInterval = setInterval(slideNext, 5000);
+}
+
+// Initial start of auto-slide
+startAutoSlide();
+
+// Manual right arrow click
+rightArrow.addEventListener('click', () => {
+    slideNext();
+    startAutoSlide(); // Reset the auto-slide timer
+});
+
+// Manual left arrow click
+leftArrow.addEventListener('click', () => {
+    slidePrevious();
+    startAutoSlide(); // Reset the auto-slide timer
+});
+// Set initial title
+updateTitle(currentState);
 </script>
 
 </body>

@@ -64,83 +64,78 @@
         </div>
 
         <!-- header start -->
-        <header>
-            <!-- slider section -->
-            <!-- Swiper -->
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <!-- Slide 1 -->
-                    <div class="swiper-slide slide-1">
-                        <div class="header-section">
-                            <div class="blck-box"></div>
-                            <div class="container">
-                                <form class="form-box align-self-center">
-                                    <h1 class="destination-name">KERALA</h1>
-                                    <p class="destintaion-desc">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel enim
-                                        distinctio magnam aspernatur perferendis saepe illo, reprehenderit consequuntur
-                                        doloribus.
-                                    </p>
-                                    <div class="destination-search d-flex">
-                                        <input class="form-control me-2" type="search"
-                                            placeholder="Search Destination Here" aria-label="Search">
-                                        <button class="btn btn-outline-success" type="submit">Search</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Navbar -->
+        <div class="navbar-container">
+            <nav class="bg-white w-full py-6 shadow-xl rounded-xl">
+                <div class="flex justify-between items-center px-6">
+                    <!-- Logo -->
+                    <div class="w-12 h-6 bg-black rounded"></div>
 
-                    <!-- Slide 2 -->
-                    <div class="swiper-slide slide-2">
-                        <div class="header-section">
-                            <div class="blck-box"></div>
-                            <div class="container">
-                                <form class="form-box align-self-center">
-                                    <h1 class="destination-name">KASOL</h1>
-                                    <p class="destintaion-desc">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel enim
-                                        distinctio magnam aspernatur perferendis saepe illo, reprehenderit consequuntur
-                                        doloribus.
-                                    </p>
-                                    <div class="destination-search d-flex">
-                                        <input class="form-control me-2" type="search"
-                                            placeholder="Search Destination Here" aria-label="Search">
-                                        <button class="btn btn-outline-success" type="submit">Search</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Navigation Links -->
+                    <ul class="flex items-center space-x-10 text-sm font-medium text-gray-800 relative">
+                        <li><a href="#" class="hover:text-blue-600">Home</a></li>
+                        <li><a href="#" class="hover:text-blue-600">About Us</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Blog</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Contact</a></li>
 
-                    <!-- Slide 3 -->
-                    <div class="swiper-slide slide-3">
-                        <div class="header-section">
-                            <div class="blck-box"></div>
-                            <div class="container">
-                                <form class="form-box align-self-center">
-                                    <h1 class="destination-name">CHOPTA-TUNGNATH</h1>
-                                    <p class="destintaion-desc">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel enim
-                                        distinctio magnam aspernatur perferendis saepe illo, reprehenderit consequuntur
-                                        doloribus.
-                                    </p>
-                                    <div class="destination-search d-flex">
-                                        <input class="form-control me-2" type="search"
-                                            placeholder="Search Destination Here" aria-label="Search">
-                                        <button class="btn btn-outline-success" type="submit">Search</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+                        <!-- All Trips Dropdown -->
+                        <li class="relative">
+                            <button id="dropdownButton"
+                                class="flex items-center gap-1 hover:text-blue-600 focus:outline-none">
+                                All Trips
+                                <svg class="w-2 h-4 transition-transform" fill="none" stroke="currentColor"
+                                    stroke-width="2" viewBox="0 0 16 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+
+                            <!-- Dropdown Menu -->
+                            <ul id="dropdownMenu"
+                                class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg hidden">
+                                <li><a href="#" class="block px-4 py-3 text-blue-600 hover:bg-gray-100">Weekend
+                                        Trips</a></li>
+                                <li><a href="#" class="block px-4 py-3 text-blue-600 hover:bg-gray-100">International
+                                        Trips</a></li>
+                                <li><a href="#" class="block px-4 py-3 text-blue-600 hover:bg-gray-100">Upcoming
+                                        Trips</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#" class="hover:text-blue-600">Log In</a></li>
+                    </ul>
                 </div>
-                <!-- Pagination and Arrows -->
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next"><i class="fa-solid fa-arrow-right fa-lg" style="color: #ffffff;"></i>
-                </div>
-                <div class="swiper-button-prev"><i class="fa-solid fa-arrow-left fa-lg" style="color: #ffffff;"></i>
+            </nav>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="hero20">
+            <!-- Background Images -->
+            <img src="heroimage3.png" alt="Third Campsite" class="hero-image3">
+            <img src="heroimage2.png" alt="Foggy Campsite" class="hero-image2">
+            <img src="heroimage.png" alt="Sunset Campsite" class="hero-image">
+
+            <!-- Arrows -->
+            <div class="arrow arrow-left">
+                <img src="arrow1.svg" alt="Previous">
+            </div>
+            <div class="arrow arrow-right">
+                <img src="arrow2.svg" alt="Next">
+            </div>
+
+            <!-- Content -->
+            <div class="overlay">
+                <h1 id="dynamicTitle" class="title slide-up">KERALA</h1>
+                <p class="subtitle">
+                    Discover the enchanting beauty of Kerala, where lush green landscapes, serene backwaters, and
+                    vibrant culture
+                    await you. <br>
+                    Plan your perfect getaway to God's Own Country today!
+                </p>
+
+                <div class="search-bar">
+                    <input type="text" placeholder="Search Your Destination" />
+                    <button type="button">SEARCH</button>
                 </div>
             </div>
-        </header>
+        </section>
     </div>
