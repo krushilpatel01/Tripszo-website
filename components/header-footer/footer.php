@@ -2,9 +2,10 @@
 <!-- Start of Footer -->
 <div class="footer-img">
     <img src="components/images/footer-icons.png"
-        style="width: 100%; height: 100%;
-        filter:brightness(0) saturate(100%) invert(20%) sepia(500%) saturate(532%) hue-rotate(194deg) brightness(100%) contrast(200%)" alt="">
+        style="width: 100%; height: 100%;" 
+        alt="">
 </div>
+
 
 <footer class="pt-5 pb-3 text-white">
     <div class="container">
@@ -16,7 +17,7 @@
 
             <!-- Links -->
             <div class="col-lg-9">
-                <div class="row">
+                <div class="row footer-menu-wrapper">
                     <!-- Menu -->
                     <div class="col-6 col-md-3 mb-4">
                         <ul class="list-unstyled text-start">

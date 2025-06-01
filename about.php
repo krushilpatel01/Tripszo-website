@@ -78,19 +78,24 @@
     <!-- header over -->
 
     <!-- about-us-section -->
-    <section class="about-us-section">
+    <section class="about-us-section  relative-container">
+        <div class="bg-txt">Who We <br> Are?</div>
+        <div class="glassmorphism-overlay"></div>
         <div class="container">
             <div class="row about-wrapper align-items-center">
-                <div class="bg-txt">Who We <br> Are?</div>
-                <div class="col-sm-12 col-md-6 col-lg-6 founder-image">
+                <div class="col-sm-12 col-md-6 col-lg-6 founder-image01">
                     <img src="components/images/founder.png" alt="" srcset="">
                 </div>
                 <div class="col-6 about-us-details">
                     <h2>Heading</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla provident, vel ut, a quisquam
-                        atque
-                        hic ad quasi facilis sit praesentium velit reiciendis. Quis accusantium nemo atque? Animi, culpa
-                        suscipit.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ut quae, quos eum laudantium
+                        excepturi nisi cumque non accusamus recusandae! Consequatur voluptate quidem mollitia enim
+                        veniam quos ullam harum qui nulla quasi reiciendis ratione asperiores nihil aut cumque sint,
+                        laudantium voluptates quae? Soluta, dolor. Odio totam architecto neque ratione. Eius, similique
+                        soluta fugiat quo voluptatem, veniam velit qui ut quaerat ex reiciendis tempora hic ipsa.
+                        Reprehenderit possimus maiores dolorem provident deserunt voluptatibus, quia sequi animi quod
+                        nihil totam rerum veniam odio voluptatem saepe magnam, fugit nesciunt cupiditate distinctio.
+                        Doloremque saepe hic rerum voluptate harum tempore, officiis ipsum aut esse eveniet?</p>
                 </div>
             </div>
         </div>
@@ -141,36 +146,42 @@
                             stroke-width="2" />
                     </svg>
 
-                    <!-- Journey Items -->
-                    <div class="icon-circle plane" style="left: 0%; top:38%;"><i class="fa-solid fa-plane fa-xl"></i>
+                    <div class="icon-circle plane pos-0">
+                        <i class="fa-solid fa-plane fa-xl"></i>
                     </div>
 
-                    <div class="step" style="left: 10%; top:44%">
-                        Step - 1
+                    <div class="step pos-05" data-step="1">
+                        <span class="step-label">Step - 1</span>
                         <div class="tooltip-box">This is the first step</div>
                     </div>
-                    <div class="step" style="left: 25%; top:43%">
-                        Step - 2
-                        <div class="tooltip-box">Second milestone here</div>
-                    </div>
-                    <div class="step" style="left: 40%; top:57%">
-                        Step - 3
-                        <div class="tooltip-box">Important progress</div>
-                    </div>
-                    <div class="step" style="left: 55%; top:62%">
-                        Step - 4
-                        <div class="tooltip-box">We are halfway</div>
-                    </div>
-                    <div class="step" style="left: 70%; top:40%">
-                        Step - 5
-                        <div class="tooltip-box">Almost there</div>
-                    </div>
-                    <div class="step" style="left: 87%; top:38%">
-                        Step - 6
-                        <div class="tooltip-box">Final step</div>
+
+                    <div class="step pos-10" data-step="2">
+                        <span class="step-label">Step - 2</span>
+                        <div class="tooltip-box">This is the second step</div>
                     </div>
 
-                    <div class="icon-circle destination" style="left: 97%; top:40%">
+                    <div class="step pos-15" data-step="3">
+                        <span class="step-label">Step - 3</span>
+                        <div class="tooltip-box">This is the third step</div>
+                    </div>
+
+                    <div class="step pos-20" data-step="4">
+                        <span class="step-label">Step - 4</span>
+                        <div class="tooltip-box">This is the fourth step</div>
+                    </div>
+
+                    <div class="step pos-25" data-step="5">
+                        <span class="step-label">Step - 5</span>
+                        <div class="tooltip-box">This is the fifth step</div>
+                    </div>
+
+                    <div class="step pos-30" data-step="6">
+                        <span class="step-label">Step - 6</span>
+                        <div class="tooltip-box">This is the six step</div>
+                    </div>
+
+                    <!-- ... Continue similar for other steps ... -->
+                    <div class="icon-circle destination pos-98">
                         <i class="fa-solid fa-location-dot fa-xl"></i>
                     </div>
                 </div>
@@ -179,29 +190,49 @@
     </section>
 
     <!-- founder section -->
-    <section class="founder-section">
-        <div class="container">
-            <div class="row p-1 align-items-center flex-wrap-reverse fade-in-section">
-                <div class="col-sm-12 col-md-6 col-lg-6 founder-detail p-3">
+    <section class="about-us-section founder-section">
+        <div class="container founder-overlay-wrapper">
+            <!-- First row: Founder -->
+            <div class="row align-items-center">
+                <div class="col-sm-12 col-md-6 col-lg-6 founder-detail py-3">
                     <h2>Founder</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi minima voluptatibus commodi,
+                        earum fugiat porro saepe aliquam nesciunt, doloremque, eaque repudiandae repellendus veniam.
+                        Recusandae, ad hic! Consequatur maiores ipsum totam fuga nulla alias asperiores nobis quia
+                        officia nesciunt laborum aliquid vel, quasi perferendis, dolorum sapiente explicabo atque
+                        impedit amet porro voluptates optio cumque natus! Odit illum itaque quos natus assumenda quidem
+                        magnam deserunt a ab molestias sed consequatur, aspernatur sapiente saepe blanditiis amet quis
+                        officiis. Perspiciatis iste molestiae adipisci sint possimus perferendis commodi ut porro.
+                        Magnam, deleniti vel minus, error tempora, laudantium enim saepe alias quibusdam deserunt
+                        pariatur assumenda aliquam.</p>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-6 founder-image">
+                <div class="col-sm-12 col-md-6 col-lg-6 founder-image pe-0">
                     <img src="components/images/founder.png" alt="">
                 </div>
             </div>
 
-            <div class="row p-1 align-items-center fade-in-section">
-                <div class="col-sm-12 col-md-6 col-lg-6 founder-image">
-                    <img src="components/images/founder.png" alt="">
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-6 founder-detail p-3">
+            <!-- Second row: Co-Founder -->
+            <div class="row align-items-center founder-animated-row">
+                <div class="col-sm-12 col-md-6 col-lg-6 founder-detail py-3 animated-right" style="padding-left: 30px;">
                     <h2>Co - Founder</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro neque dolorum praesentium
+                        eligendi quaerat tempore cum reiciendis sed eum adipisci dolor, ex, qui quidem ipsam sequi, amet
+                        perspiciatis necessitatibus? Velit suscipit, atque quam amet cumque voluptas possimus nihil
+                        assumenda necessitatibus repellat odio harum architecto magni. Perspiciatis, molestiae laborum
+                        ex libero tempore, iusto beatae voluptate recusandae dignissimos molestias ab placeat aut? Eius
+                        non facilis sed fuga vel minus ipsum, cupiditate odio nulla recusandae repellendus dignissimos
+                        voluptatum. Vero ipsa unde placeat? Non, tenetur nemo. Quaerat, expedita excepturi, ducimus
+                        doloremque deserunt tempora numquam vel laborum veritatis iure laboriosam ipsa est debitis.
+                        Quasi, possimus.</p>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6 founder-image animated-left">
+                    <img src="components/images/founder-2.png" alt="">
                 </div>
             </div>
         </div>
     </section>
+
+
 
 
     <!-- our team member -->
@@ -251,7 +282,30 @@
         observer.observe(section);
     });
     </script>
-ś
+
+    <!-- animation for sounder images -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const coFounderRow = document.querySelectorAll('.founder-section .row')[1];
+        const leftCol = coFounderRow.querySelector('.founder-image');
+        const rightCol = coFounderRow.querySelector('.founder-detail');
+
+        leftCol.classList.add('animate-left');
+        rightCol.classList.add('animate-right');
+
+        function checkScroll() {
+            const rect = coFounderRow.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                leftCol.classList.add('is-visible');
+                rightCol.classList.add('is-visible');
+            }
+        }
+
+        window.addEventListener('scroll', checkScroll);
+        checkScroll();
+    });
+    </script>
+
     <!-- footer addd -->
     <?php
   include "components/header-footer/footer.php";

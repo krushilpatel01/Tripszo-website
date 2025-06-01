@@ -26,16 +26,15 @@
             <div class="row gy-4 align-items-stretch mb-5">
                 <!-- Left Blog -->
                 <div class="col-12 col-lg-6 d-flex">
-                    <div class="card shadow-sm w-100">
-                        <img src="components/images/blog-1.png" class="card-img-top" alt="Blog Image">
-                        <div class="card-body">
-                            <h3 class="card-title">Blog Title</h3>
-                            <p class="card-text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio excepturi quidem alias
-                                repudiandae ipsum quod sequi repellendus, minus voluptatum ratione.
-                            </p>
+                    <a href="blog-info.php" class="text-decoration-none text-dark w-100">
+                        <div class="card shadow-sm w-100">
+                            <img src="components/images/blog-1.png" class="card-img-top" alt="Blog Image">
+                            <div class="card-body">
+                                <h3 class="card-title">Blog Title</h3>
+                                <p class="card-text">Lorem ipsum dolor sit amet...</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <!-- Right Blog Combo -->
@@ -45,7 +44,10 @@
                             <div class="card shadow-sm w-100">
                                 <img src="components/images/blog-1.png" class="card-img-top" alt="Blog Image">
                                 <div class="card-body">
-                                    <h5 class="card-title">Blog Title</h5>
+                                    <h5 class="card-title">
+                                        <a href="blog-info.php" class="text-decoration-none text-primary">Blog
+                                            Title</a>
+                                    </h5>
                                     <p class="card-text">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio excepturi quidem
                                         alias repudiandae ipsum quod sequi repellendus, minus voluptatum ratione.
@@ -58,7 +60,10 @@
                             <div class="card shadow-sm w-100">
                                 <img src="components/images/blog-1.png" class="card-img-top" alt="Blog Image">
                                 <div class="card-body">
-                                    <h5 class="card-title">Blog Title</h5>
+                                    <h5 class="card-title">
+                                        <a href="blog-info.php" class="text-decoration-none text-primary">Blog
+                                            Title</a>
+                                    </h5>
                                     <p class="card-text">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio excepturi quidem
                                         alias repudiandae ipsum quod sequi repellendus, minus voluptatum ratione.
@@ -68,6 +73,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
 
 
@@ -80,7 +86,10 @@
                             <div class="card shadow-sm w-100">
                                 <img src="components/images/blog-1.png" class="card-img-top" alt="Blog Image">
                                 <div class="card-body">
-                                    <h5 class="card-title">Blog Title</h5>
+                                    <h5 class="card-title">
+                                        <a href="blog-info.php" class="text-decoration-none text-primary">Blog
+                                            Title</a>
+                                    </h5>
                                     <p class="card-text">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio excepturi quidem
                                         alias repudiandae ipsum quod sequi repellendus, minus voluptatum ratione.
@@ -93,7 +102,10 @@
                             <div class="card shadow-sm w-100">
                                 <img src="components/images/blog-1.png" class="card-img-top" alt="Blog Image">
                                 <div class="card-body">
-                                    <h5 class="card-title">Blog Title</h5>
+                                    <h5 class="card-title">
+                                        <a href="blog-info.php" class="text-decoration-none text-primary">Blog
+                                            Title</a>
+                                    </h5>
                                     <p class="card-text">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio excepturi quidem
                                         alias repudiandae ipsum quod sequi repellendus, minus voluptatum ratione.
@@ -104,18 +116,19 @@
                     </div>
                 </div>
 
+
                 <!-- Left Blog -->
                 <div class="col-12 col-lg-6 d-flex">
-                    <div class="card shadow-sm w-100">
-                        <img src="components/images/blog-1.png" class="card-img-top" alt="Blog Image">
-                        <div class="card-body">
-                            <h3 class="card-title">Blog Title</h3>
-                            <p class="card-text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio excepturi quidem alias
-                                repudiandae ipsum quod sequi repellendus, minus voluptatum ratione.
-                            </p>
+                    <a href="blog-info.php" class="text-decoration-none text-dark w-100">
+                        <div class="card shadow-sm w-100">
+                            <img src="components/images/blog-1.png" class="card-img-top" alt="Blog Image">
+                            <div class="card-body">
+                                <h3 class="card-title">Blog Title</h3>
+                                <p class="card-text">Lorem ipsum dolor sit amet...</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
+
                 </div>
             </div>
 

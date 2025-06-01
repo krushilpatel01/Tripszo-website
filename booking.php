@@ -20,7 +20,7 @@
 
 
 
-    <section class="book-your-slot my-5">
+    <section class="book-your-slot">
         <div class="container">
 
             <!-- steps header -->
