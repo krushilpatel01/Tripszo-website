@@ -1231,7 +1231,6 @@ footer {
     font-weight: 800;
     color: transparent;
     -webkit-text-stroke: 1.5px rgba(255, 0, 0, 1);
-    text-stroke: 1.5px rgba(255, 0, 0, 1);
     padding: 20px 40px;
     border-radius: 20px;
     white-space: nowrap;

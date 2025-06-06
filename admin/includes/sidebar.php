@@ -5,7 +5,8 @@
 
   <!-- change life -->
   <a href="<?= BASE_URL ?>trips/view-trips.php">Manage Trips</a>
-  <a href="<?= BASE_URL ?>destinations/view-destinations.php">Destinations</a>
+  <a href="<?= BASE_URL ?>destinations/view-destination.php">Destinations</a>
+  <a href="<?= BASE_URL ?>types/view-types.php">Trip Types</a>
   <a href="<?= BASE_URL ?>bookings/view-bookings.php">Bookings</a>
   <a href="<?= BASE_URL ?>coupons/view-coupons.php">Coupons</a>
   <a href="<?= BASE_URL ?>bookings/view-inquiries.php">Inquiries</a>
