@@ -37,7 +37,7 @@ include "components/header-footer/pages-header.php";
             <?php while ($row = $result->fetch_assoc()) { ?>
             <div class="col-md-4 mb-4">
                 <div class="card shadow-sm">
-                    <img src="../../admin/admin-components/trip-img/<?= $row['image']; ?>" class="card-img-top"
+                    <img src="admin/admin-components/trip-img/<?= $row['trip_img']; ?>" class="card-img-top"
                         alt="<?= $row['trip_name']; ?>">
                     <div class="card-body">
                         <h5 class="card-title"><?= $row['trip_name']; ?></h5>

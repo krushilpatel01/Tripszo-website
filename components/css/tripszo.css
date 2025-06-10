@@ -3025,3 +3025,9 @@ form textarea {
     cursor: not-allowed;
     color: #666666;
 }
+
+
+/* send-query page code */
+.modal-body .form-control{
+    border: 1px solid black !important;
+}

@@ -287,8 +287,60 @@ function setRoom(type) {
             btn.classList.add('active');
         }
     });
+
 }
 </script>
+
+
+<script>
+document.getElementById('bookingForm').addEventListener('submit', function(e) {
+    // Get Step 1 user info
+    const name = document.getElementById('name')?.value || '';
+    const email = document.getElementById('email')?.value || '';
+    const number = document.getElementById('number')?.value || '';
+
+    // Get selected room info
+    const roomSelect = document.getElementById('roomTypeSelect');
+    const selectedRoomType = roomSelect?.value || '';
+    const selectedRoomPrice = roomSelect?.selectedOptions[0]?.dataset.price || 0;
+
+    // People counts
+    const adult = parseInt(document.getElementById('adultCount').textContent || '0');
+    const child = parseInt(document.getElementById('childCount').textContent || '0');
+    const senior = parseInt(document.getElementById('seniorCount').textContent || '0');
+    const totalPeople = adult + child + senior;
+
+    // Date & summary values
+    const selectedDate = document.getElementById('summaryDate')?.textContent || '';
+    const gst = document.getElementById('summaryGst')?.textContent || 0;
+    const totalAmount = document.getElementById('summaryTotal')?.textContent || 0;
+
+    // Set hidden fields
+    document.getElementById('hiddenName').value = name;
+    document.getElementById('hiddenEmail').value = email;
+    document.getElementById('hiddenNumber').value = number;
+    document.getElementById('hiddenTripDate').value = selectedDate;
+    document.getElementById('hiddenRoomType').value = selectedRoomType;
+    document.getElementById('hiddenRoomPrice').value = selectedRoomPrice;
+    document.getElementById('hiddenTotalPeople').value = totalPeople;
+    document.getElementById('hiddenGst').value = gst;
+    document.getElementById('hiddenTotalAmount').value = totalAmount;
+
+    // Optional debug
+    console.log("Submitting booking with values:", {
+        name,
+        email,
+        number,
+        selectedRoomType,
+        selectedRoomPrice,
+        totalPeople,
+        selectedDate,
+        gst,
+        totalAmount
+    });
+});
+</script>
+
 
 </body>
 

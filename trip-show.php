@@ -147,20 +147,33 @@ if (mysqli_num_rows($room_query) > 0) {
                                 <h6 class="text-white fs-5"><b>Starting Price</b></h6>
                                 <h2><?= number_format($trip['price']) ?>/-</h2>
                             </div>
-                            <div class="price-colour"><small><b><?= number_format($trip['discount']) ?>/-
+                            <div class="price-colour text-center"><small><b><?= number_format($trip['discount']) ?>/-
                                         off</b></small></div>
                         </div>
                         <p class="mt-2"><?= $trip['short_description'] ?? 'Exciting trip for travel lovers!' ?></p>
-                        <button class="btn-blue w-35 bg-white text-primary"><b>SEND QUERY</b></button>
+                        <!-- SEND QUERY Modal Trigger -->
+                        <button class="btn-blue w-100 bg-white text-primary mb-2" data-bs-toggle="modal"
+                            data-bs-target="#queryModal">
+                            <b>SEND QUERY</b>
+                        </button>
+
+                        <!-- BOOK NOW Button -->
+                        <!-- Hidden inputs for booking -->
+                        <form action="booking.php" method="get">
+                            <input type="hidden" name="trip_id" value="<?= $trip['id'] ?>">
+
+                            <button type="submit" class="btn-blue w-100 bg-primary text-white mt-2"><b>BOOK
+                                    NOW</b></button>
+                        </form>
                     </div>
 
                     <div class="price-summary mb-3">
                         <h6 class="fw-bold">Price Summary</h6>
                         <p class="mb-1">Room Sharing</p>
                         <div class="share-btn mb-2">
-                            <span onclick="setRoom('Quad')" class="room-btn active">Quad</span>
-                            <span onclick="setRoom('Triple')" class="room-btn">Triple</span>
-                            <span onclick="setRoom('Double')" class="room-btn">Double</span>
+                            <span onclick="setRoom('Quad', this)" class="room-btn active">Quad</span>
+                            <span onclick="setRoom('Triple', this)" class="room-btn">Triple</span>
+                            <span onclick="setRoom('Double', this)" class="room-btn">Double</span>
                         </div>
 
 
@@ -202,6 +215,40 @@ if (mysqli_num_rows($room_query) > 0) {
             </div>
         </div>
     </section>
+
+
+
+    <!-- Query Modal -->
+    <div class="modal fade" id="queryModal" tabindex="-1" aria-labelledby="queryModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form method="POST" action="send-query.php">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="queryModalLabel">Send Your Query</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="hidden" name="trip_id" value="<?= $trip['id'] ?>">
+                        <div class="mb-3">
+                            <label class="form-label">Your Name</label>
+                            <input type="text" name="name" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Your Email</label>
+                            <input type="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Message</label>
+                            <textarea name="message" class="form-control" rows="3" required></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Send Query</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <script>
     document.addEventListener("DOMContentLoaded", function() {

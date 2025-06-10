@@ -7,51 +7,53 @@
     <h2 class="text-center mb-4">Customer Inquiries</h2>
 
     <!-- Table to show the inquiries -->
+    <?php
+include "../../components/config/config.php";
+
+$query = "SELECT q.*, t.trip_name 
+          FROM trip_queries q 
+          LEFT JOIN trips t ON q.trip_id = t.id 
+          ORDER BY q.id DESC";
+
+$result = mysqli_query($conn, $query);
+$counter = 1;
+?>
+
     <table class="table table-bordered table-striped">
         <thead>
             <tr>
                 <th>#</th>
                 <th>Inquiry ID</th>
                 <th>Customer Name</th>
-                <th>Subject</th>
+                <th>Message</th>
                 <th>Date</th>
                 <th>Status</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-            <!-- Example of an inquiry entry -->
+            <?php while ($row = mysqli_fetch_assoc($result)) {
+            // Format ID like #INQ001
+            $inq_id = '#INQ' . str_pad($row['id'], 3, '0', STR_PAD_LEFT);
+            ?>
             <tr>
-                <td>1</td>
-                <td>#INQ001</td>
-                <td>John Doe</td>
-                <td>Inquiry about trip packages</td>
-                <td>2025-06-10</td>
-                <td>Pending</td>
+                <td><?= $counter++ ?></td>
+                <td><?= $inq_id ?></td>
+                <td><?= htmlspecialchars($row['name']) ?></td>
+                <td><?= htmlspecialchars($row['message']) ?></td>
+                <td><?= date("Y-m-d", strtotime($row['created_at'] ?? 'now')) ?></td>
+                <td><?= $row['status'] ?? 'Pending' ?></td>
                 <td>
-                    <a href="view_inquiry.php?id=1" class="btn btn-primary btn-sm">View</a>
-                    <a href="reply_inquiry.php?id=1" class="btn btn-success btn-sm">Reply</a>
-                    <a href="delete_inquiry.php?id=1" class="btn btn-danger btn-sm"
+                    <a href="view_inquiry.php?id=<?= $row['id'] ?>" class="btn btn-primary btn-sm">View</a>
+                    <a href="reply_inquiry.php?id=<?= $row['id'] ?>" class="btn btn-success btn-sm">Reply</a>
+                    <a href="delete_inquiry.php?id=<?= $row['id'] ?>" class="btn btn-danger btn-sm"
                         onclick="return confirm('Are you sure you want to delete this inquiry?')">Delete</a>
                 </td>
             </tr>
-            <tr>
-                <td>2</td>
-                <td>#INQ002</td>
-                <td>Jane Smith</td>
-                <td>Question about hotel availability</td>
-                <td>2025-06-15</td>
-                <td>Answered</td>
-                <td>
-                    <a href="view_inquiry.php?id=2" class="btn btn-primary btn-sm">View</a>
-                    <a href="reply_inquiry.php?id=2" class="btn btn-success btn-sm">Reply</a>
-                    <a href="delete_inquiry.php?id=2" class="btn btn-danger btn-sm"
-                        onclick="return confirm('Are you sure you want to delete this inquiry?')">Delete</a>
-                </td>
-            </tr>
-            <!-- Add more inquiries dynamically -->
+            <?php } ?>
         </tbody>
     </table>
+
 </div>
 
 
