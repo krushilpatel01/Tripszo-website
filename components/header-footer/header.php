@@ -133,9 +133,13 @@
                 </p>
 
                 <div class="search-bar">
-                    <input type="text" placeholder="Search Your Destination" />
-                    <button type="button">SEARCH</button>
+                    <form action="search-result.php" method="GET" class="d-flex justify-between align-items-center">
+                        <input type="text" name="destination" class="form-control me-2"
+                            placeholder="Search Your Destination" required>
+                        <button type="submit" class="btn search-btn">SEARCH</button>
+                    </form>
                 </div>
+
             </div>
         </section>
     </div>

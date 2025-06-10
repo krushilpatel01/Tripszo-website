@@ -1,14 +1,3 @@
-<?php
-// session_start();
-// if (!isset($_SESSION['user_id'])) {
-//     header("Location: login.php");
-//     exit;
-// }
-// else{
-//     echo $_SESSION['user_name'];
-//     }
-?>
-
 <!-- include header from header folder -->
 <?php
 include "components/header-footer/header.php";
@@ -64,93 +53,34 @@ include "components/header-footer/header.php";
     <div class="container">
         <h2 class="centerd-title">DESTINATION CARDS</h2>
         <div class="row desctination-list my-2">
+            <?php
+            include "components/config/config.php"; // DB connection
+
+            $dest_query = "SELECT * FROM destination ORDER BY id DESC LIMIT 6";
+            $dest_result = $conn->query($dest_query);
+
+            while ($dest = $dest_result->fetch_assoc()) {
+                $imgPath = !empty($dest['image']) ? "admin/admin-components/destination-img/" . $dest['image'] : "components/images/default-destination.jpg";
+            ?>
             <div class="col-sm-12 col-md-6 col-lg-4 desctination-img">
-                <img src="components/images/destination-img1.png" alt="" srcset="">
+                <img src="<?= $imgPath ?>" alt="<?= htmlspecialchars($dest['name']) ?>">
                 <div class="dest-box">
-                    <a href="trip-show.php" class="d-flex align-items-center justify-content-between px-3"
+                    <a href="destination.php?destination=<?= urlencode($dest['id']) ?>"
+                        class="d-flex align-items-center justify-content-between px-3"
                         style="color:#0C3EB2; text-decoration: none;">
-                        <h3>See More</h3>
+                        <h3><?= htmlspecialchars($dest['name']) ?></h3>
                         <i class="fa-solid fa-arrow-right fa-sm"></i>
                     </a>
                     <hr>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius labore quae necessitatibus eveniet
-                        voluptatibus consequuntur?</p>
-                    <h2 class="dest-price">Start From 10000/-</h2>
+                    <p><?= htmlspecialchars(substr($dest['details'], 0, 100)) ?>...</p>
+                    <h2 class="dest-price">Start From ₹10,000/-</h2>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 desctination-img"><img src="components/images/destination-img2.png"
-                    alt="" srcset="">
-                <div class="dest-box">
-                    <a href="trip-show.php" class="d-flex align-items-center justify-content-between px-3"
-                        style="color:#0C3EB2; text-decoration: none;">
-                        <h3>See More</h3>
-                        <i class="fa-solid fa-arrow-right fa-sm"></i>
-                    </a>
-                    <hr>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius labore quae necessitatibus eveniet
-                        voluptatibus consequuntur?</p>
-                    <h2 class="dest-price">Start From 10000/-</h2>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 desctination-img"><img src="components/images/destination-img1.png"
-                    alt="" srcset="">
-                <div class="dest-box">
-                    <a href="trip-show.php" class="d-flex align-items-center justify-content-between px-3"
-                        style="color:#0C3EB2; text-decoration: none;">
-                        <h3>See More</h3>
-                        <i class="fa-solid fa-arrow-right fa-sm"></i>
-                    </a>
-                    <hr>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius labore quae necessitatibus eveniet
-                        voluptatibus consequuntur?</p>
-                    <h2 class="dest-price">Start From 10000/-</h2>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 desctination-img">
-                <img src="components/images/destination-img1.png" alt="" srcset="">
-                <div class="dest-box">
-                    <a href="trip-show.php" class="d-flex align-items-center justify-content-between px-3"
-                        style="color:#0C3EB2; text-decoration: none;">
-                        <h3>See More</h3>
-                        <i class="fa-solid fa-arrow-right fa-sm"></i>
-                    </a>
-                    <hr>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius labore quae necessitatibus eveniet
-                        voluptatibus consequuntur?</p>
-                    <h2 class="dest-price">Start From 10000/-</h2>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 desctination-img"><img src="components/images/destination-img2.png"
-                    alt="" srcset="">
-                <div class="dest-box">
-                    <a href="trip-show.php" class="d-flex align-items-center justify-content-between px-3"
-                        style="color:#0C3EB2; text-decoration: none;">
-                        <h3>See More</h3>
-                        <i class="fa-solid fa-arrow-right fa-sm"></i>
-                    </a>
-                    <hr>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius labore quae necessitatibus eveniet
-                        voluptatibus consequuntur?</p>
-                    <h2 class="dest-price">Start From 10000/-</h2>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 desctination-img"><img src="components/images/destination-img1.png"
-                    alt="" srcset="">
-                <div class="dest-box">
-                    <a href="trip-show.php" class="d-flex align-items-center justify-content-between px-3"
-                        style="color:#0C3EB2; text-decoration: none;">
-                        <h3>See More</h3>
-                        <i class="fa-solid fa-arrow-right fa-sm"></i>
-                    </a>
-                    <hr>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius labore quae necessitatibus eveniet
-                        voluptatibus consequuntur?</p>
-                    <h2 class="dest-price">Start From 10000/-</h2>
-                </div>
-            </div>
+            <?php } ?>
         </div>
     </div>
 </section>
+
 
 <!-- form section -->
 <section class="form-wrapper">

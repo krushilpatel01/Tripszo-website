@@ -302,7 +302,7 @@ header {
     line-height: 1.6;
 }
 
-.search-bar {
+.search-bar  form{
     display: flex;
     align-items: center;
     border-radius: 999px;
@@ -315,6 +315,7 @@ header {
 }
 
 .search-bar input {
+    margin: 10px auto;
     flex: 1;
     border: none;
     padding: 0 1.5rem;
@@ -323,15 +324,18 @@ header {
     outline: none;
     font-family: 'Amulya', sans-serif;
     color: #333;
+    outline: none;
 }
 
 .search-bar input::placeholder {
     color: #999;
 }
 
-.search-bar button {
+.search-bar .search-btn{
+    width: 35%;
     height: 90%;
     padding: 0 2rem;
+    line-height: 3.5;
     background-color: #0B3EC8;
     border: none;
     color: white;
@@ -339,11 +343,12 @@ header {
     font-weight: 600;
     font-family: 'Amulya', sans-serif;
     cursor: pointer;
+    margin-right: 3px;
     border-radius: 999px;
-    margin-right: 4px;
 }
 
-.search-bar button:hover {
+.search-bar .search-btn:hover {
+    color: white !important;
     background-color: #082fa1;
 }
 
@@ -840,7 +845,7 @@ header {
     right: 0;
     margin: 0 auto;
     background-color: #D9D9D9;
-    bottom: -163px;
+    bottom: -140px;
     border-radius: 10px 10px 0px 0px;
     transition: all 0.5s ease-in-out;
     padding: 10px;
@@ -2609,19 +2614,37 @@ form textarea {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.share-btn span {
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    margin-right: 5px;
-    cursor: pointer;
-    font-size: 12px;
+.share-btn {
+    display: flex !important;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
-.share-btn span:hover {
-    background-color: #A8A308;
-    color: white;
+.share-btn span {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 500;
+    user-select: none;
 }
+
+.share-btn span:hover,
+.share-btn span.active {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+.room-btn .active {
+    background-color: #0d6efd;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 5px;
+}
+
 
 .btn-blue {
     background-color: #0057ff;

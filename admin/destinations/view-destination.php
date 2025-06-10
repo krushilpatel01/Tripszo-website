@@ -1,10 +1,13 @@
 <?php
 include "../../components/config/config.php"; // DB connection
+include('../includes/header.php'); 
+include('../includes/sidebar.php');
 
 // Handle Add Destination
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $name = trim($_POST['destination_name']);
     $details = trim($_POST['destination_details']);
+    $created_by = trim($_SESSION['admin_name']);
 
     if (!empty($name) && !empty($details) && isset($_FILES['destination_image'])) {
         $image = $_FILES['destination_image'];
@@ -14,8 +17,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         // Move image to folder
         if (move_uploaded_file($image['tmp_name'], $uploadPath)) {
-            $stmt = $conn->prepare("INSERT INTO destination (name, details, image) VALUES (?, ?, ?)");
-            $stmt->bind_param("sss", $name, $details, $imgName);
+            $stmt = $conn->prepare("INSERT INTO destination (name, details, image, created_by) VALUES (?, ?, ?,?)");
+            $stmt->bind_param("ssss", $name, $details, $imgName, $created_by);
             if ($stmt->execute()) {
                 $stmt->close();
                 echo "<script>alert('Destination added successfully!'); window.location.href='view-destination.php';</script>";
@@ -50,9 +53,6 @@ $destinations = $conn->query("SELECT * FROM destination ORDER BY id DESC");
 ?>
 
 
-
-<?php include('../includes/header.php'); ?>
-<?php include('../includes/sidebar.php'); ?>
 
 <div class="container mt-5">
     <h2 class="text-center mb-4">Add Destination</h2>

@@ -6,10 +6,11 @@ include('../includes/sidebar.php');
 // Handle Add Trip Type
 if (isset($_POST['add_type'])) {
     $type_name = trim($_POST['type_name']);
+    $created_by = trim($_SESSION['admin_name']);
 
     if (!empty($type_name)) {
-        $stmt = $conn->prepare("INSERT INTO trip_types (name) VALUES (?)");
-        $stmt->bind_param("s", $type_name);
+        $stmt = $conn->prepare("INSERT INTO trip_types (name,created_by) VALUES (?,?)");
+        $stmt->bind_param("ss", $type_name, $created_by);
 
         if ($stmt->execute()) {
             echo "<script>alert('Trip type added successfully!'); window.location.href='view-types.php';</script>";

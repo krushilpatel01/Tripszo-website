@@ -1,3 +1,23 @@
+<?php
+session_start();
+
+// Prevent browser caching
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+
+// Check if admin logged in
+if (!isset($_SESSION['admin_id'])) {
+    header("Location: admin-login.php");
+    exit;
+}
+
+// Optionally, use session variables in your page:
+$admin_id = $_SESSION['admin_id'];
+$admin_name = $_SESSION['admin_name'];
+$admin_role = $_SESSION['admin_role'];
+?>
+
 <?php include('includes/header.php'); ?>
 
 <!-- Sidebar -->
@@ -6,6 +26,7 @@
     <a href="dashboard.php" class="active">Dashboard</a>
     <a href="trips/view-trips.php">Manage Trips</a>
     <a href="destinations/view-destinations.php">Destinations</a>
+    <a href="types/view-types.php">Trip Types</a>
     <a href="bookings/view-bookings.php">Bookings</a>
     <a href="coupons/view-coupons.php">Coupons</a>
     <a href="bookings/view-inquiries.php">Inquiries</a>
@@ -17,7 +38,7 @@
     <nav class="navbar navbar-expand-lg shadow-sm">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Dashboard</a>
-            <span class="text-white ms-auto">Welcome, Admin</span>
+            <span class="text-white ms-auto">Welcome, <?php echo $admin_name; ?></span>
         </div>
     </nav>
 

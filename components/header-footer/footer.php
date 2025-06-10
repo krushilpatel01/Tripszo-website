@@ -1,9 +1,7 @@
 <!-- footer.php -->
 <!-- Start of Footer -->
 <div class="footer-img">
-    <img src="components/images/footer-icons.png"
-        style="width: 100%; height: 100%;" 
-        alt="">
+    <img src="components/images/footer-icons.png" style="width: 100%; height: 100%;" alt="">
 </div>
 
 
@@ -145,8 +143,6 @@ var swiper = new Swiper(".mySwiper", {
 });
 </script>
 
-
-
 <!-- latest slider javascript -->
 <!-- Scripts -->
 <script>
@@ -260,6 +256,38 @@ leftArrow.addEventListener('click', () => {
 });
 // Set initial title
 updateTitle(currentState);
+</script>
+
+
+
+<!-- ✅ Add this here, after all HTML elements are loaded -->
+<script>
+const roomPrices = {
+    quad: <?= (int)$room_prices['quad_price'] ?>,
+    triple: <?= (int)$room_prices['triple_price'] ?>,
+    double: <?= (int)$room_prices['couple_price'] ?> // or double_price if that's correct
+};
+
+function setRoom(type) {
+    const key = type.toLowerCase();
+    const priceBox = document.getElementById('room-price-box');
+    const roomTypeText = document.getElementById('room-type');
+
+    if (roomPrices[key]) {
+        const formattedPrice = roomPrices[key].toLocaleString();
+        priceBox.innerHTML = `<p><strong class="text-primary">Rs ${formattedPrice}</strong> Per Person</p>`;
+        roomTypeText.innerText = type.toUpperCase();
+    } else {
+        priceBox.innerHTML = `<p class="text-danger">Price not available for ${type}</p>`;
+    }
+
+    document.querySelectorAll('.room-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.textContent.trim().toLowerCase() === key) {
+            btn.classList.add('active');
+        }
+    });
+}
 </script>
 
 </body>
