@@ -10,7 +10,7 @@
         <div class="row justify-content-between align-items-center mb-4">
             <!-- Logo -->
             <div class="col-lg-3 mb-4 mb-lg-0">
-                <img src="components/images/hero-image1.jpg" alt="Logo" class="img-fluid foote-logo">
+                <img src="components/images/logo-1.jpg" alt="Logo" class="img-fluid foote-logo">
             </div>
 
             <!-- Links -->
@@ -31,9 +31,12 @@
                     <div class="col-6 col-md-3 mb-4">
                         <ul class="list-unstyled text-start">
                             <li class="footer-heading fw-bold mb-2">All Trips</li>
-                            <li>Weekend Trips</li>
-                            <li>International Trips</li>
-                            <li>Upcoming Trips</li>
+                            <li><a href="weekend-trips.php" class="text-white text-decoration-none">Weekend Trips</a>
+                            </li>
+                            <li><a href="international-trip.php" class="text-white text-decoration-none">International
+                                    Trips</a></li>
+                            <li><a href="upcoming-trips.php" class="text-white text-decoration-none">Upcoming Trips</a>
+                            </li>
                         </ul>
                     </div>
 
