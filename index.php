@@ -1,5 +1,12 @@
 <!-- include header from header folder -->
 <?php
+
+    // Make sure session is started
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+
+    
 include "components/header-footer/header.php";
 ?>
 <!-- header over -->
@@ -10,28 +17,33 @@ include "components/header-footer/header.php";
         <div class="row gap-1 d-flex justify-content-between">
             <div class="col-sm-6 col-md-3 col-lg-2 service-card">
                 <div class="icon"><img src="components/images/liggage-icon.png"
-                        style="width:50%; height: 50%; filter: brightness(0) invert(1);" alt="" srcset=""></div>
+                        style="width:50%; height:auto; filter: brightness(0) invert(1);" alt="" srcset=""></div>
                 <h3 class="service-name">Backpack</h3>
             </div>
             <div class="col-sm-6 col-md-3 col-lg-2 service-card">
                 <div class="icon"><img src="components/images/aeroplane-icon.png"
-                        style="width:50%; height: 50%; filter: brightness(0) invert(1);" alt="" srcset=""></div>
+                        style="width:50%; height:auto; filter: brightness(0) invert(1);" alt="" srcset=""></div>
                 <h3 class="service-name">International</h3>
             </div>
             <div class="col-sm-6 col-md-3 col-lg-2 service-card">
                 <div class="icon"><img src="components/images/hiking-icon.png"
-                        style="width:50%; height: 50%; filter: brightness(0) invert(1);" alt="" srcset=""></div>
+                        style="width:50%; height:auto; filter: brightness(0) invert(1);" alt="" srcset=""></div>
                 <h3 class="service-name">Adventureous</h3>
             </div>
             <div class="col-sm-6 col-md-3 col-lg-2 service-card">
                 <div class="icon"><img src="components/images/-partnership-icon.png"
-                        style="width:50%; height: 50%; filter: brightness(0) invert(1);" alt="" srcset=""></div>
+                        style="width:50%; height:auto; filter: brightness(0) invert(1);" alt="" srcset=""></div>
                 <h3 class="service-name">Corporate</h3>
             </div>
             <div class="col-sm-6 col-md-3 col-lg-2 service-card">
                 <div class="icon"><img src="components/images/bus-icon.png"
-                        style="width:50%; height: 50%; filter: brightness(0) invert(1);" alt="" srcset=""></div>
+                        style="width:50%; height:auto; filter: brightness(0) invert(1);" alt="" srcset=""></div>
                 <h3 class="service-name">Weekend Trips</h3>
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-2 service-card">
+                <div class="icon"><img src="components/images/wine-glasses.png"
+                        style="width:50%; height:auto; filter: brightness(0) invert(1);" alt="" srcset=""></div>
+                <h3 class="service-name">Honeymoon Trips</h3>
             </div>
         </div>
     </div>
@@ -62,7 +74,7 @@ include "components/header-footer/header.php";
             while ($dest = $dest_result->fetch_assoc()) {
                 $imgPath = !empty($dest['image']) ? "admin/admin-components/destination-img/" . $dest['image'] : "components/images/default-destination.jpg";
             ?>
-            <div class="col-sm-12 col-md-6 col-lg-4 desctination-img">
+            <div class="col-sm-12 col-md-6 col-lg-3 desctination-img">
                 <img src="<?= $imgPath ?>" alt="<?= htmlspecialchars($dest['name']) ?>">
                 <div class="dest-box">
                     <a href="destination.php?destination=<?= urlencode($dest['id']) ?>"
@@ -72,7 +84,7 @@ include "components/header-footer/header.php";
                         <i class="fa-solid fa-arrow-right fa-sm"></i>
                     </a>
                     <hr>
-                    <p><?= htmlspecialchars(substr($dest['details'], 0, 100)) ?>...</p>
+                    <p><?= htmlspecialchars(substr($dest['details'], 0, 70)) ?>...</p>
                     <h2 class="dest-price">Start From ₹10,000/-</h2>
                 </div>
             </div>

@@ -118,15 +118,21 @@ nav.navbar {
 }
 
 .navbar-toggler {
-    background-color: var(--main-color);
+    /* background-color: var(--main-color); */
+    border: none;
 }
 
 .navbar-toggler-icon {
     color: white;
 }
 
-.navbar-brand{
+.navbar-brand {
     padding: 10px 0px;
+}
+
+
+.navbar-light .navbar-toggler-icon {
+    background-image: none;
 }
 
 @media (max-width:999px) {
@@ -176,6 +182,55 @@ nav.navbar {
         display: block;
         z-index: 99;
     }
+
+    /* Apply animation to all nav links */
+    .nav-link {
+        width: 100%;
+        position: relative;
+        display: inline-block;
+        color: #000;
+        /* Customize if needed */
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    /* The animated underline */
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        right: 0;
+        margin: 0 auto;
+        width: 0%;
+        height: 2px;
+        background-color: #007bff;
+        /* or any accent color */
+        transition: width 0.3s ease-in-out;
+    }
+
+    /* On hover: grow the underline */
+    .nav-link:hover::after {
+        width: 70%;
+    }
+
+    /* Optional: Change text color on hover */
+    .nav-link:hover {
+        color: #007bff;
+    }
+}
+
+@media (max-width: 425px) {
+    .navbar-brand {
+        width: 50%;
+        padding: 10px 0px;
+    }
+
+    .navbar-brand img {
+        width: 100% !important;
+    }
+
+
 }
 
 /* nav  over */
@@ -302,7 +357,7 @@ header {
     line-height: 1.6;
 }
 
-.search-bar  form{
+.search-bar form {
     display: flex;
     align-items: center;
     border-radius: 999px;
@@ -331,11 +386,11 @@ header {
     color: #999;
 }
 
-.search-bar .search-btn{
+.search-bar .search-btn {
     width: 35%;
     height: 90%;
-    padding: 0 2rem;
-    line-height: 3.5;
+    padding: 10px 0px;
+    /* line-height: 3.5; */
     background-color: #0B3EC8;
     border: none;
     color: white;
@@ -702,42 +757,24 @@ header {
 
 .service-card {
     width: 25%;
-    height: 350px;
-    background-color: #D9D9D9;
+    height: 320px;
+    background-color: white;
+    box-shadow: 1px 5px 10px rgb(172, 178, 181);
     text-align: center;
     position: relative;
     padding: 0px;
-    border-radius: 30px;
+    border-radius: 10px 10px 10px 10px;
     overflow: hidden;
     margin: 10px auto;
-}
-
-@media screen and (max-width:550px) {
-    .service-card {
-        width: 60%;
-    }
-}
-
-@media screen and (min-width:551px) and (max-width:768px) {
-    .service-card {
-        width: 30%;
-    }
-}
-
-@media screen and (min-width:769px) {
-    .service-card {
-        width: 18%;
-    }
 }
 
 .service-card .icon {
     background-color: var(--main-color);
     width: 100%;
-    height: 200px;
-    border-radius: 0 0 50% 50%;
+    height: 150px;
+    border-radius: 0 0 35% 35%;
     position: relative;
     z-index: 1;
-    line-height: 160px;
     transition: background-color 0.3s ease;
     overflow: hidden;
 }
@@ -763,8 +800,61 @@ header {
     font-family: var(--main-title);
     font-weight: 600;
     font-size: 22px;
-    margin-top: 60px;
+    margin-top: 30px;
     padding: 30px 10px;
+}
+
+@media screen and (max-width:550px) {
+    .service-card {
+        width: 30%;
+        height: 200px;
+    }
+
+    .service-card .icon {
+        height: 100px;
+        padding: 20px 0px;
+    }
+
+    .service-card .service-name {
+        margin-top: 30px;
+        font-size: 100%;
+    }
+
+}
+
+@media screen and (min-width:551px) and (max-width:768px) {
+    .service-card {
+        width: 30%;
+        height: 250px;
+    }
+
+    .service-card .icon {
+        height: 150px;
+        padding: 20px 0px;
+    }
+
+    .service-card .service-name {
+        margin-top: 30px;
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (min-width:769px) {
+    .service-card {
+        width: 15%;
+        height: 270px;
+    }
+
+    .service-card .icon {
+        height: 150px;
+        padding: 20px 0px;
+    }
+
+    .service-card .service-name {
+        margin-top: 30px;
+        font-size: 14px;
+    }
 }
 
 
@@ -849,6 +939,12 @@ header {
     border-radius: 10px 10px 0px 0px;
     transition: all 0.5s ease-in-out;
     padding: 10px;
+}
+
+@media screen and (min-width:560px) and (max-width:1024px) {
+    .desctination-img .dest-box {
+        bottom: -150px;
+    }
 }
 
 .dest-box hr {
@@ -974,6 +1070,12 @@ header {
     background-color: black;
 }
 
+@media (max-width:560px) {
+    .form-box1 form input[types=button] {
+        width: 50%;
+    }
+}
+
 /* plan structure class */
 
 .plan-structure-wrapper {
@@ -988,7 +1090,8 @@ header {
 
 .plan-list .plan-box {
     width: 24%;
-    background-color: #D9D9D9;
+    background-color: rgb(250, 242, 242);
+    box-shadow: rgba(255, 255, 255, 0.2);
     height: 400px;
     padding: 20px 0px;
     border-radius: 20px;
@@ -1013,7 +1116,8 @@ header {
 
 .plan-list .plan-box:hover {
     background-color: antiquewhite;
-    box-shadow: 0px 0px 10px black;
+    box-shadow: 1px 5px 10px rgb(172, 178, 181);
+
 }
 
 .plan-box p {
@@ -2554,9 +2658,10 @@ form textarea {
 
 /* trip-show */
 /* ====================================================================== */
-.trip-show-wrapper{
+.trip-show-wrapper {
     margin: 100px auto;
 }
+
 .trip-show-portfolio {
     margin: 0px auto;
 }
@@ -2569,17 +2674,19 @@ form textarea {
 
 .tab-btn {
     border: none;
-    background: transparent;
-    padding: 10px;
-    font-weight: 500;
-    border-radius: 20px;
-    transition: background 0.3s;
+    /* background: #eee; */
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: transparent;
 }
 
 .tab-btn.active {
-    background-color: #0057ff;
+    background: #0d6efd;
     color: white;
+    border-radius: 20px;
 }
+
 
 .tab-content-box {
     background-color: #eaeaea;
@@ -2825,9 +2932,10 @@ form textarea {
 
 /* Step Header */
 
-.book-your-slot{
+.book-your-slot {
     margin: 150px auto;
 }
+
 .step-header {
     display: flex;
     justify-content: space-between;
@@ -3028,6 +3136,6 @@ form textarea {
 
 
 /* send-query page code */
-.modal-body .form-control{
+.modal-body .form-control {
     border: 1px solid black !important;
 }

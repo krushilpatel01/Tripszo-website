@@ -1,4 +1,11 @@
 <?php
+
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit;
+}
+
 include "components/config/config.php";
 $trip_id = $_GET['trip_id'] ?? null;
 
